@@ -27,8 +27,8 @@ permalink: /
     <h2 class="h3">Network resources</h2>
     <ul>
       <li><a href="https://www.wpi.edu/" target="_blank" rel="noreferrer">WPI website</a></li>
-      <li><a href="https://www.mass.gov/orgs/massachusetts-bioindustrial-initiative" target="_blank" rel="noreferrer">MBI (Massachusetts Bioindustrial Initiative)</a></li>
-      <li><a href="https://www.mass.gov/lists/massachusetts-bioindustrial-initiative" target="_blank" rel="noreferrer">MBI Regional Biomanufacturing Strategy</a></li>
+      <li><a href="https://mbi.bio/" target="_blank" rel="noreferrer">MBI (Massachusetts Bioindustrial Initiative)</a></li>
+      <li><a href="https://mbi.bio/wp-content/uploads/2024/07/Regional-Biomanufacturing-Strategy.pdf" target="_blank" rel="noreferrer">MBI Regional Biomanufacturing Strategy</a></li>
       <li><a href="https://masstech.org/" target="_blank" rel="noreferrer">MassTech Collaborative</a></li>
     </ul>
   </div>
