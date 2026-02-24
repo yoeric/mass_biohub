@@ -26,7 +26,7 @@ a{color:inherit}
   z-index:10;
 }
 .header-inner{display:flex; align-items:center; justify-content:space-between; gap:16px;}
-.site-title{font-weight:800; text-decoration:none; display:flex; align-items:center; gap:8px; font-size:18pt;}
+.site-title{font-weight:800; text-decoration:none; display:flex; align-items:center; gap:8px; font-size:24pt;}
 .header-logo{height:42px; width:auto; display:block;}
 .site-nav a{
   text-decoration:none;
@@ -41,7 +41,7 @@ a{color:inherit}
 }
 
 .page-header{margin: 12px 0 18px;}
-.page-title{margin:0 0 6px; font-size:12pt;}
+.page-title{margin:0 0 6px; font-size:8pt;}
 .page-subtitle{margin:0; color:var(--muted);}
 
 .lead{font-size:1.12rem; color:var(--muted);}
