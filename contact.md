@@ -5,8 +5,12 @@ permalink: /contact/
 ---
 
 ## Get in touch
-**Email:** hub@example.edu  
-**Address:** Building, Room, WPI, Worcester, MA  
+**Director:** Dr. Eric M. Young
+**Email:** [emyoung@wpi.edu](mailto:emyoung@wpi.edu)
+
+**Regional Innovation Officer:** John Weaver
+
+**Address:** WPI, Worcester, MA
 
 ## Collaboration inquiries
 When reaching out, it helps if you include:

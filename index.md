@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Bioindustrial Hub"
-subtitle: "Advanced biotech infrastructure for discovery, scale-up, and translation"
+title: "The BioHub"
+subtitle: "Supporting the Bioindustrial Manufacturing Community in Central Massachusetts"
 permalink: /
 ---
 

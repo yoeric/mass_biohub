@@ -5,8 +5,6 @@ subtitle: "Academic · Industry · Public sector · Community"
 permalink: /partners/
 ---
 
-<p class="muted">Partners are listed in <code>_data/partners.yml</code>.</p>
-
 <div class="cards">
 {% for p in site.data.partners %}
   {% include partner-card.html partner=p %}
