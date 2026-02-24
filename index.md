@@ -7,8 +7,8 @@ permalink: /
 <div class="hero">
   <div>
     <p class="lead">
-      We are a bioindustrial hub that accelerates the pathway from <strong>idea → prototype → scale-up</strong>.
-      Our facilities support high-throughput engineering, bioprocess development, and hands-on building.
+      We are bringing together a community of partners to solve the biggest challenges in bioindustrial manufacturing.
+	  Our facilities support process innovation, scale-up, strain optimization, and workforce development.
     </p>
 
     <div class="cta-row">
@@ -17,8 +17,8 @@ permalink: /
     </div>
 
     <div class="quick-facts">
-      <div><strong>Focus:</strong> biomanufacturing, synthetic biology, scale-up, workforce</div>
-      <div><strong>Services:</strong> DBTL workflows, fermentation, analytics, prototyping</div>
+      <div><strong>Focus:</strong> optimization, innovation, scale-up, workforce development</div>
+      <div><strong>Services:</strong> WPI Pilot Plant, MBI Builder's Lab, WPI BioFoundry</div>
       <div><strong>Engagement:</strong> industry collaborations, training, shared resources</div>
     </div>
 
