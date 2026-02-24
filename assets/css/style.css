@@ -21,12 +21,12 @@ a{color:inherit}
 
 .site-header{
   border-bottom:1px solid var(--line);
-  background:var(--bg2);
+  background:var(--bg);
   position:sticky; top:0;
   z-index:10;
 }
 .header-inner{display:flex; align-items:center; justify-content:space-between; gap:16px;}
-.site-title{font-weight:800; text-decoration:none; display:flex; align-items:center; gap:8px;}
+.site-title{font-weight:800; text-decoration:none; display:flex; align-items:center; gap:8px; font-size:18pt;}
 .header-logo{height:42px; width:auto; display:block;}
 .site-nav a{
   text-decoration:none;
@@ -41,7 +41,7 @@ a{color:inherit}
 }
 
 .page-header{margin: 12px 0 18px;}
-.page-title{margin:0 0 6px;}
+.page-title{margin:0 0 6px; font-size:12pt;}
 .page-subtitle{margin:0; color:var(--muted);}
 
 .lead{font-size:1.12rem; color:var(--muted);}
@@ -124,7 +124,7 @@ a{color:inherit}
 .footer-logos a:hover{opacity:0.8;}
 .footer-logo{width:auto; display:block;}
 .footer-logo-wpi{height:42px;}
-.footer-logo-mbi{height:34px;}
+.footer-logo-mbi{height:30px;}
 .footer-logo-techhub{height:42px;}
 
 @media (max-width: 900px){
