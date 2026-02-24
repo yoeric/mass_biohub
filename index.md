@@ -1,6 +1,6 @@
 ---
 layout: page
-subtitle: "Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts"
+title: "Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts"
 permalink: /
 ---
 
