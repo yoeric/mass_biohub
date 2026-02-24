@@ -1,7 +1,6 @@
 ---
 layout: page
-title: "The BioHub"
-subtitle: "Supporting the Bioindustrial Manufacturing Community in Central Massachusetts"
+subtitle: "Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts"
 permalink: /
 ---
 
