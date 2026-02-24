@@ -1,7 +1,7 @@
 title: "The BioHub"
 description: "Supporting the Bioindustrial Manufacturing Community in Central Massachusetts"
-url: ""
-baseurl: ""   # set to "/repo-name" if using username.github.io/repo-name
+url: "https://yoeric.github.io"
+baseurl: "/mass_biohub"
 
 markdown: kramdown
 permalink: pretty
