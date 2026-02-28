@@ -73,7 +73,7 @@ Google Fonts are loaded in `_layouts/default.html`:
 
 **`index.md`** — single-column layout: lead paragraph → CTA buttons → "What we do" cards (3-column grid, each links to `/services/`) → Latest News (`hero-card`). Title is "Building with Biology" with subtitle "Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts".
 
-**`about.md`** — plain Markdown: Mission → Engagement model → Who we serve → Lead Partner Websites. No cards or HTML blocks.
+**`about.md`** — plain Markdown: Mission → Who we serve → Engagement model → Lead Partner Websites. No cards or HTML blocks.
 
 **`contact.md`** — "Get in touch" section uses a `.cards` grid. Dr. Eric M. Young's card (`young_burn_50.jpg`, `.person-photo` class) links via `mailto:` — email address is intentionally not shown in text to prevent scraping. Jon Weaver's card has no email. Collaboration inquiries section lists what to include when reaching out.
 
