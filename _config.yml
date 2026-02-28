@@ -1,7 +1,7 @@
 title: "The BioHub"
 description: "Supporting the Bioindustrial Manufacturing Community in Central Massachusetts"
-url: "https://yoeric.github.io"
-baseurl: "/mass_biohub"
+url: "https://massbiohub.org"
+baseurl: ""
 
 markdown: kramdown
 permalink: pretty
