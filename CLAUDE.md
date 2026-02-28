@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Jekyll-based static website for the Massachusetts BioHub, hosted on GitHub Pages at `https://yoeric.github.io/mass_biohub`.
+This is a Jekyll-based static website for the Massachusetts BioHub, hosted on GitHub Pages at `https://yoeric.github.io/mass_biohub`. The custom domain `massbiohub.org` is purchased and pending DNS setup — once configured, `_config.yml` `url` and `baseurl` should be updated to `https://massbiohub.org` and `""` respectively, and the `CNAME` file is already in place.
 
 ## Build & Serve
 
@@ -41,6 +41,39 @@ Content flows through three layers:
 Content pages (`index.md`, `about.md`, `facilities.md`, `partners.md`, `news.md`, `contact.md`) use Markdown with Jekyll frontmatter and reference includes/data directly via Liquid templating.
 
 Styling is in `assets/css/style.css` (CSS variables + Grid layout, mobile breakpoint at 900px). Logo images are in `assets/img/`.
+
+## Design System
+
+### Colors
+All colors are defined as CSS variables in `style.css`:
+
+| Variable | Value | Usage |
+|---|---|---|
+| `--header-bg` | `#2A6F8A` | Header background, card backgrounds |
+| `--accent` | `#1E5271` | Links, hover states |
+| `--crimson` | `#AC2B37` | Primary CTA buttons (ties to WPI brand) |
+| `--bg` | `#FFFFFF` | Page background |
+| `--bg2` | `#EAF2F5` | Secondary backgrounds (hero card, footer) |
+| `--line` | `#C8DDE5` | Borders |
+| `--fg` | `#12283A` | Body text |
+| `--muted` | `#527A8A` | Secondary text |
+
+### Typography
+Google Fonts are loaded in `_layouts/default.html`:
+- **Plus Jakarta Sans** (400–800) — body text, navigation, all general content
+- **League Spartan** (600) — site title ("The BioHub") in the header only
+- **Lexend** (600) — loaded but not currently applied; available for use
+
+### Cards
+`.card` uses `--header-bg` (teal) background with white text. `.hero-card` uses `--bg2` (pale teal) for the Latest News section.
+
+## Homepage Layout (`index.md`)
+
+The homepage is a single-column layout (no grid):
+1. Lead paragraph
+2. CTA buttons (Mission, Explore facilities, Partner with us)
+3. "What we do" cards (3-column grid)
+4. Latest News (`hero-card`)
 
 ## Adding Content
 
