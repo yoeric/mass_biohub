@@ -25,7 +25,7 @@ There are no npm/pip dependencies — Jekyll is the only runtime dependency.
 
 ## Deployment
 
-Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/jekyll-docker.yml`), which builds and deploys the site automatically. Output goes to `_site/` (not committed).
+Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/jekyll-docker.yml`), which builds and deploys the site automatically. Output goes to `_site/` (not committed). If the live site looks different from local preview after a push, do a hard refresh (`Ctrl+Shift+R`) to clear the browser cache.
 
 ## Architecture
 
