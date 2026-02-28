@@ -8,14 +8,14 @@ permalink: /about/
 ## Mission
 Enable rapid development and translation of bioindustrial technologies through shared infrastructure, expertise, and partnerships.
 
+## Who we serve
+Organizations and innovators across the regional bioindustrial ecosystem.
+
 ## Engagement model
 - **Network building** with BioHub Day and other events
 - **Shared facility access** with training and support
 - **Workforce development** programs and industry-aligned curricula
 - **Sponsored projects** and **Collaborative R&D**
-
-## Who we serve
-Organizations and innovators across the regional bioindustrial ecosystem.
 
 ## Lead Partner Websites
 - [MBI Regional Biomanufacturing Strategy](https://mbi.bio/wp-content/uploads/2024/07/Regional-Biomanufacturing-Strategy.pdf)
