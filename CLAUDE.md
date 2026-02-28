@@ -67,13 +67,11 @@ Google Fonts are loaded in `_layouts/default.html`:
 ### Cards
 `.card` uses `--header-bg` (teal) background with white text. `.hero-card` uses `--bg2` (pale teal) for the Latest News section.
 
-## Homepage Layout (`index.md`)
+## Page Notes
 
-The homepage is a single-column layout (no grid):
-1. Lead paragraph
-2. CTA buttons (Mission, Explore facilities, Partner with us)
-3. "What we do" cards (3-column grid)
-4. Latest News (`hero-card`)
+**`index.md`** — single-column layout: lead paragraph → CTA buttons → "What we do" cards (3-column grid) → Latest News (`hero-card`)
+
+**`about.md`** — plain Markdown: Mission → Engagement model → Who we serve → Lead Partner Websites. No cards or HTML blocks.
 
 ## Adding Content
 
