@@ -5,6 +5,28 @@ permalink: /contact/
 ---
 
 ## Get in touch
+Email us at **biohub** *(placeholder — update when address is confirmed)*.
+
+Please include:
+- Your <strong>organization</strong>
+- Appropriate <strong>point of contact</strong>
+- Your <strong>engagement</strong> interest: 
+	- joining our network
+	- using our facilities
+	- developing curriculum
+	- hiring our trainees
+- A <strong>project outline</strong> with:
+	- project type:
+		- scale-up
+		- prototyping
+		- process development
+		- strain engineering
+	- timeline
+	- confidentiality constraints
+	
+We look forward to working with you!!
+
+## Leadership
 
 <div class="cards">
   <a class="card" href="mailto:emyoung@wpi.edu">
@@ -19,9 +41,3 @@ permalink: /contact/
     <p class="muted">Regional Innovation Officer</p>
   </div>
 </div>
-
-## Collaboration inquiries
-When reaching out, it helps if you include:
-- Your organization and point of contact
-- The technical goal (e.g., strain engineering, process development, analytics, prototyping)
-- Timeline, funding status, and any confidentiality constraints
