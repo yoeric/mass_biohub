@@ -1,11 +1,14 @@
 :root{
   --max: 1040px;
   --pad: 18px;
-  --fg: #121212;
-  --muted: #555;
-  --line: #e6e6e6;
-  --bg: #fff;
-  --bg2: #fafafa;
+  --fg: #12283A;
+  --muted: #527A8A;
+  --line: #C8DDE5;
+  --bg: #FFFFFF;
+  --bg2: #EAF2F5;
+  --accent: #1E5271;
+  --header-bg: #2A6F8A;
+  --crimson: #AC2B37;
 }
 
 *{box-sizing:border-box}
@@ -16,28 +19,27 @@ body{
   background:var(--bg);
   line-height:1.55;
 }
-a{color:inherit}
+a{color:var(--accent)}
 .container{max-width:var(--max); margin:0 auto; padding:var(--pad);}
 
 .site-header{
-  border-bottom:1px solid var(--line);
-  background:var(--bg);
+  background:var(--header-bg);
   position:sticky; top:0;
   z-index:10;
 }
 .header-inner{display:flex; align-items:center; justify-content:space-between; gap:16px;}
-.site-title{font-weight:800; text-decoration:none; display:flex; align-items:center; gap:8px; font-size:24pt;}
-.header-logo{height:60px; width:auto; display:block;}
+.site-title{font-weight:800; text-decoration:none; display:flex; align-items:center; gap:8px; font-size:24pt; color:#fff;}
+.header-logo{height:60px; width:auto; display:block; background:#fff; border-radius:8px; padding:3px 6px;}
 .site-nav a{
   text-decoration:none;
   margin-left:12px;
-  color:var(--muted);
+  color:rgba(255,255,255,0.82);
   padding:6px 8px;
   border-radius:8px;
 }
 .site-nav a.active, .site-nav a:hover{
-  color:var(--fg);
-  background:#f1f1f1;
+  color:#fff;
+  background:rgba(255,255,255,0.18);
 }
 
 .page-header{margin: 12px 0 18px;}
@@ -64,14 +66,19 @@ a{color:inherit}
 .button{
   display:inline-block;
   text-decoration:none;
-  border:1px solid var(--fg);
+  background:var(--crimson);
+  color:#fff;
+  border:1px solid var(--crimson);
   padding:8px 12px;
   border-radius:12px;
 }
+.button:hover{background:#8e2030; border-color:#8e2030; color:#fff;}
 .button-secondary{
-  border-color:var(--line);
   background:var(--bg2);
+  color:var(--accent);
+  border-color:var(--line);
 }
+.button-secondary:hover{background:var(--line); color:var(--accent);}
 
 .quick-facts{margin-top:10px; color:var(--muted);}
 .muted{color:var(--muted);}
