@@ -28,7 +28,7 @@ a{color:var(--accent)}
   z-index:10;
 }
 .header-inner{display:flex; align-items:center; justify-content:space-between; gap:16px;}
-.site-title{font-family:'League Spartan',sans-serif; font-weight:600; text-decoration:none; display:flex; align-items:center; gap:8px; font-size:24pt; color:#fff;}
+.site-title{font-family:'League Spartan',sans-serif; font-weight:600; text-decoration:none; display:flex; align-items:center; gap:8px; font-size:34pt; color:#fff;}
 .header-logo{height:60px; width:auto; display:block; background:#fff; border-radius:8px; padding:3px 6px;}
 .site-nav a{
   text-decoration:none;
@@ -56,10 +56,10 @@ a{color:var(--accent)}
   align-items:start;
 }
 .hero-card{
-  border:1px solid var(--crimson);
+  border:1px solid var(--header-bg);
   border-radius:16px;
   padding:14px;
-  background:var(--crimson);
+  background:var(--header-bg);
   color:#fff;
   margin-top:24px;
 }
@@ -70,13 +70,13 @@ a{color:var(--accent)}
 .button{
   display:inline-block;
   text-decoration:none;
-  background:var(--header-bg);
+  background:var(--crimson);
   color:#fff;
-  border:1px solid var(--header-bg);
+  border:1px solid var(--crimson);
   padding:8px 12px;
   border-radius:12px;
 }
-.button:hover{background:var(--accent); border-color:var(--accent); color:#fff;}
+.button:hover{background:#8e2030; border-color:#8e2030; color:#fff;}
 .button-secondary{
   background:var(--bg2);
   color:var(--accent);
@@ -104,6 +104,18 @@ a{color:var(--accent)}
 }
 .card:hover{background:var(--line); color:var(--fg);}
 .card .muted{color:var(--muted);}
+
+.person-photo{
+  width:100%;
+  max-width:260px;
+  max-height:260px;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:8px;
+  margin-bottom:10px;
+  display:block;
+}
 
 .clean-list{list-style:none; padding-left:0; margin:0;}
 .clean-list li{padding:10px 0; border-bottom:1px solid var(--line);}
