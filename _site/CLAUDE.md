@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Jekyll-based static website for the Massachusetts BioHub, live at `https://massbiohub.org`. The `CNAME` file and `_config.yml` are already configured for this domain.
+This is a Jekyll-based static website for the Massachusetts BioHub, live at `https://massbiohub.org`. The `CNAME` file and `_config.yml` are already configured for this domain. The domain is locked at Wix until April 29 — transfer to Cloudflare Registrar at that point for free DNS management.
 
 Canonical partner URLs: WPI → `https://www.wpi.edu/`, MBI → `https://mbi.bio/`, MassTech → `https://masstech.org/`. Use these consistently across footer and content pages.
 
@@ -32,7 +32,7 @@ Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/jekyl
 Content flows through three layers:
 
 **Data** (`_data/`) → YAML files drive dynamic page sections:
-- `nav.yml` — Navigation links (Facilities was renamed to Services, permalink `/services/`)
+- `nav.yml` — Navigation order: Home · Services · News · Partners · About · Contact
 - `partners.yml` — Partner cards rendered on `partners.md`
 - `news.yml` — News items rendered on `index.md` and `news.md`
 
@@ -40,7 +40,7 @@ Content flows through three layers:
 
 **Includes** (`_includes/`) → Reusable components: `nav.html`, `footer.html`, `news-item.html`, `partner-card.html`
 
-Content pages (`index.md`, `about.md`, `facilities.md`, `partners.md`, `news.md`, `contact.md`) use Markdown with Jekyll frontmatter and reference includes/data directly via Liquid templating.
+Content pages use Markdown with Jekyll frontmatter. Note: the Services page file is still named `facilities.md` but has `permalink: /services/` and title "Services".
 
 Styling is in `assets/css/style.css` (CSS variables + Grid layout, mobile breakpoint at 900px). Images are organized into `assets/img/logos/` (biohub, wpi, mbi, techhub logos) and `assets/img/people/` (portrait photos).
 
@@ -51,11 +51,11 @@ All colors are defined as CSS variables in `style.css`:
 
 | Variable | Value | Usage |
 |---|---|---|
-| `--header-bg` | `#2A6F8A` | Header background, primary buttons |
+| `--header-bg` | `#2A6F8A` | Header background, Latest News (`hero-card`) background |
 | `--accent` | `#1E5271` | Links, hover states |
-| `--crimson` | `#AC2B37` | Latest News (`hero-card`) background |
+| `--crimson` | `#AC2B37` | Primary buttons |
 | `--bg` | `#FFFFFF` | Page background |
-| `--bg2` | `#EAF2F5` | Secondary backgrounds (hero card, footer) |
+| `--bg2` | `#EAF2F5` | Card backgrounds, footer |
 | `--line` | `#C8DDE5` | Borders |
 | `--fg` | `#3d5261` | Body text, headings |
 | `--muted` | `#527A8A` | Secondary text |
@@ -67,18 +67,21 @@ Google Fonts are loaded in `_layouts/default.html`:
 - **Lexend** (600) — loaded but not currently applied; available for use
 
 ### Cards
-`.card` uses `--bg2` (pale teal) background with dark text and is a clickable `<a>` element. `.hero-card` uses `--crimson` background with white text for the Latest News section.
+`.card` uses `--bg2` (pale teal) background with dark text. When used as a link, it is an `<a>` element; otherwise a `<div>`. `.hero-card` uses `--header-bg` (teal) background with white text for the Latest News section. `.person-photo` class styles portrait images: square crop, `max-width/max-height: 260px`, rounded corners.
 
 ## Page Notes
 
-**`index.md`** — single-column layout: lead paragraph → CTA buttons → "What we do" cards (3-column grid, each links to `/services/`) → Latest News (`hero-card`). Title is "Building with Biology" with subtitle "Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts".
+**`index.md`** — Lead paragraph → CTA buttons (crimson) → "What we do" cards (3-column grid, each links to `/services/`) → Latest News (`hero-card`). Title: "Building with Biology", subtitle: "Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts".
 
-**`about.md`** — plain Markdown: Mission → Who we serve → Our engagement model → Lead Partner Websites. Title is "About Us" (no subtitle). No cards or HTML blocks.
+**`about.md`** — Mission → Who we serve → Our engagement model → Leadership (cards grid: Dr. Young with photo/mailto, Jon Weaver) → Lead Partner Websites. Title: "About Us" (no subtitle).
 
-**`contact.md`** — "Get in touch" section has a general BioHub email placeholder (update when confirmed) followed by a nested bullet list of what to include when reaching out. "Leadership" section below uses a `.cards` grid. Dr. Eric M. Young's card (`young_burn_50.jpg`, `.person-photo` class) links via `mailto:` — email address is intentionally not shown in text to prevent scraping. Jon Weaver's card has no email.
+**`partners.md`** — "Join the BioHub" button → partner cards from `partners.yml` → "Work with us" section.
+
+**`contact.md`** — "Get in touch" section with a red button (`.button`) as general BioHub email placeholder (update `mailto:` when address confirmed) → nested bullet list of what to include when reaching out.
 
 ## Adding Content
 
-- **New news item**: Add an entry to `_data/news.yml` — it appears automatically on the homepage and news page.
-- **New partner**: Add an entry to `_data/partners.yml` — it appears on the partners page.
+- **New news item**: Add an entry to `_data/news.yml` — appears automatically on homepage and news page.
+- **New partner**: Add an entry to `_data/partners.yml` — appears on the partners page.
+- **New team member**: Add a card to the Leadership section in `about.md`. Place portrait in `assets/img/people/`.
 - **New page**: Create a `.md` file with frontmatter `layout: page`, `title:`, and optionally `subtitle:`, then add it to `_data/nav.yml`.
