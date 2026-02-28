@@ -15,6 +15,23 @@ permalink: /
   <a class="button button-secondary" href="{{ '/partners/' | relative_url }}">Partner with us</a>
 </div>
 
+## What we do
+<div class="cards">
+  <div class="card">
+    <h3 class="h3">De-risk scale-up</h3>
+    <p>Process development capabilities, scale-down models, and scale-up execution readiness.</p>
+  </div>
+  <div class="card">
+    <h3 class="h3">Enable builders</h3>
+    <p>Hands-on spaces and training for prototyping, instrumentation, and practical biomanufacturing skills.</p>
+  </div>
+  <div class="card">
+    <h3 class="h3">Accelerate innovation</h3>
+    <p>High-throughput workflows for biological design-build-test-learn cycles.</p>
+  </div>
+</div>
+
+
 <div class="hero-card">
   <h2 class="h3">Latest news</h2>
   {% assign items = site.data.news | sort: "date" | reverse | slice: 0, 3 %}

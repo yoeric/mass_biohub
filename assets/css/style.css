@@ -89,12 +89,14 @@ a{color:var(--accent)}
   gap:14px;
 }
 .card{
-  border:1px solid var(--line);
+  border:1px solid var(--header-bg);
   border-radius:16px;
   padding:14px;
-  background:var(--bg);
+  background:var(--header-bg);
+  color:#fff;
   box-shadow: 0 1px 0 rgba(0,0,0,0.02);
 }
+.card .muted{color:rgba(255,255,255,0.75);}
 
 .clean-list{list-style:none; padding-left:0; margin:0;}
 .clean-list li{padding:10px 0; border-bottom:1px solid var(--line);}
