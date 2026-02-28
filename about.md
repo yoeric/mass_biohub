@@ -11,10 +11,6 @@ Enable rapid development and translation of bioindustrial technologies through s
 ## What we do
 <div class="cards">
   <div class="card">
-    <h3 class="h3">Accelerate DBTL</h3>
-    <p>High-throughput workflows for design-build-test-learn cycles from strain construction to analytics.</p>
-  </div>
-  <div class="card">
     <h3 class="h3">De-risk scale-up</h3>
     <p>Process development capabilities, scale-down models, and scale-up execution readiness.</p>
   </div>
@@ -22,12 +18,26 @@ Enable rapid development and translation of bioindustrial technologies through s
     <h3 class="h3">Enable builders</h3>
     <p>Hands-on spaces and training for prototyping, instrumentation, and practical biomanufacturing skills.</p>
   </div>
+  <div class="card">
+    <h3 class="h3">Accelerate DBTL</h3>
+    <p>High-throughput workflows for design-build-test-learn cycles from strain construction to analytics.</p>
+  </div>
 </div>
 
 ## Engagement model
-- **Sponsored projects** and **collaborative R&D**
+- **Network building** with BioHub Day and other events
 - **Shared facility access** with training and support
 - **Workforce development** programs and industry-aligned curricula
+- **Sponsored projects** and **Collaborative R&D**
 
 ## Who we serve
-Startups, established industry teams, researchers, and community partners across the regional bioindustrial ecosystem.
+Organizations and innovators across the regional bioindustrial ecosystem.
+
+    <h2 class="h3">Lead Partner Websites</h2>
+    <ul>
+	  <li><a href="https://mbi.bio/wp-content/uploads/2024/07/Regional-Biomanufacturing-Strategy.pdf" target="_blank" rel="noreferrer">MBI Regional Biomanufacturing Strategy</a></li>
+      <li><a href="https://www.wpi.edu/" target="_blank" rel="noreferrer">WPI website</a></li>
+      <li><a href="https://mbi.bio/" target="_blank" rel="noreferrer">MBI (Massachusetts Bioindustrial Initiative)</a></li>
+      <li><a href="https://masstech.org/" target="_blank" rel="noreferrer">MassTech Collaborative</a></li>
+    </ul>
+  </div>
