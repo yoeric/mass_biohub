@@ -1,24 +1,23 @@
 ---
 layout: page
-title: About
-subtitle: "Mission, model, and how we work"
+title: About Us
 permalink: /about/
 ---
 
 ## Mission
-Enable rapid development and translation of bioindustrial technologies through shared infrastructure, expertise, and partnerships.
+Enable <strong>rapid development</strong> and <strong>translation</strong> of bioindustrial technologies through shared infrastructure, expertise, and partnerships.
 
 ## Who we serve
-Organizations and innovators across the regional bioindustrial ecosystem.
+We serve organizations and innovators across the regional bioindustrial ecosystem.
 
-## Engagement model
-- **Network building** with BioHub Day and other events
-- **Shared facility access** with training and support
+## Our engagement model
+- **Facilitating networking** we host events to connect the bioindustrial community
+- **Shared infrastructure access** designed specifically for early-stage research and scale-up
 - **Workforce development** programs and industry-aligned curricula
 - **Sponsored projects** and **Collaborative R&D**
 
 ## Lead Partner Websites
-- [MBI Regional Biomanufacturing Strategy](https://mbi.bio/wp-content/uploads/2024/07/Regional-Biomanufacturing-Strategy.pdf)
 - [WPI website](https://www.wpi.edu/)
 - [MBI (Massachusetts Bioindustrial Initiative)](https://mbi.bio/)
 - [MassTech Collaborative](https://masstech.org/)
+- [MBI Regional Biomanufacturing Strategy](https://mbi.bio/wp-content/uploads/2024/07/Regional-Biomanufacturing-Strategy.pdf)
