@@ -75,7 +75,7 @@ Google Fonts are loaded in `_layouts/default.html`:
 
 **`about.md`** — plain Markdown: Mission → Who we serve → Our engagement model → Lead Partner Websites. Title is "About Us" (no subtitle). No cards or HTML blocks.
 
-**`contact.md`** — "Get in touch" section uses a `.cards` grid. Dr. Eric M. Young's card (`young_burn_50.jpg`, `.person-photo` class) links via `mailto:` — email address is intentionally not shown in text to prevent scraping. Jon Weaver's card has no email. Collaboration inquiries section lists what to include when reaching out.
+**`contact.md`** — "Get in touch" section has a general BioHub email placeholder (update when confirmed) followed by a nested bullet list of what to include when reaching out. "Leadership" section below uses a `.cards` grid. Dr. Eric M. Young's card (`young_burn_50.jpg`, `.person-photo` class) links via `mailto:` — email address is intentionally not shown in text to prevent scraping. Jon Weaver's card has no email.
 
 ## Adding Content
 
