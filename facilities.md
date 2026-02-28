@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Facilities
+title: Services
 subtitle: "BioFoundry · Scale-Up · Builder’s Lab"
-permalink: /facilities/
+permalink: /services/
 ---
 
 <div class="cards">
