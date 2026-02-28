@@ -63,7 +63,7 @@ All colors are defined as CSS variables in `style.css`:
 ### Typography
 Google Fonts are loaded in `_layouts/default.html`:
 - **Plus Jakarta Sans** (400–800) — body text, navigation, all general content
-- **League Spartan** (600) — site title ("The BioHub") in the header only
+- **League Spartan** (600) — site title ("The BioHub") in the header only, `font-size: 34pt`
 - **Lexend** (600) — loaded but not currently applied; available for use
 
 ### Cards
