@@ -1,12 +1,12 @@
 - label: Home
   href: /
-- label: About
-  href: /about/
 - label: Services
   href: /services/
 - label: News
   href: /news/
 - label: Partners
   href: /partners/
+- label: About
+  href: /about/
 - label: Contact
   href: /contact/
