@@ -77,7 +77,7 @@ Google Fonts are loaded in `_layouts/default.html`:
 
 **`partners.md`** — "Join the BioHub" button → partner cards from `partners.yml` → "Work with us" section.
 
-**`contact.md`** — "Get in touch" section with a red button (`.button`) as general BioHub email placeholder (update `mailto:` when address confirmed) → nested bullet list of what to include when reaching out.
+**`contact.md`** — "Get in touch" section with a red button (`.button`) linking to `mailto:biohub@wpi.edu` → nested bullet list of what to include when reaching out.
 
 ## Adding Content
 
