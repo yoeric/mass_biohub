@@ -6,9 +6,7 @@ permalink: /contact/
 
 ## Get in touch
 
-<a class="button" href="mailto:biohub@placeholder.edu">Email the BioHub</a>
-
-*(placeholder — update mailto address when confirmed)*
+<a class="button" href="mailto:biohub@wpi.edu">Email the BioHub</a>
 
 Please include:
 - Your <strong>organization</strong>
