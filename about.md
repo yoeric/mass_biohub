@@ -4,17 +4,27 @@ title: About Us
 permalink: /about/
 ---
 
-## Mission
-Enable <strong>rapid development</strong> and <strong>translation</strong> of bioindustrial technologies through shared infrastructure, expertise, and partnerships.
+<div class="mission">
+  <h2>BioHub Mission Statement</h2>
+  <p>Enable <strong>rapid development</strong> and <strong>translation</strong> of bioindustrial technologies through shared infrastructure, expertise, and partnerships.</p>
+</div>
+
+<div class="card" style="text-align:center" markdown="1">
 
 ## Who we serve
 We serve organizations and innovators across the regional bioindustrial ecosystem.
+
+</div>
+
+<div class="card card-centered-list" markdown="1">
 
 ## Our engagement model
 - **Facilitating networking** we host events to connect the bioindustrial community
 - **Shared infrastructure access** designed specifically for early-stage research and scale-up
 - **Workforce development** programs and industry-aligned curricula
 - **Sponsored projects** and **Collaborative R&D**
+
+</div>
 
 ## Leadership
 

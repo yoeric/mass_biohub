@@ -40,7 +40,7 @@ Content flows through three layers:
 
 **Includes** (`_includes/`) → Reusable components: `nav.html`, `footer.html`, `news-item.html`, `partner-card.html`
 
-Content pages use Markdown with Jekyll frontmatter. Note: the Services page file is still named `facilities.md` but has `permalink: /services/` and title "Services".
+Content pages use Markdown with Jekyll frontmatter. Note: the Services page file is still named `facilities.md` but has `permalink: /services/` and title "Services". Services page structure: 3 top summary cards (Network · Projects · Workforce Development) → Network section → Projects section (3 sub-cards: Process Development · Scale-Up · Strain Engineering, then Project Resources sub-section with BioFoundry · Scale-Up Lab · Builder's Lab) → Workforce Development section.
 
 Styling is in `assets/css/style.css` (CSS variables + Grid layout, mobile breakpoint at 900px). Images are organized into `assets/img/logos/` (biohub, wpi, mbi, techhub logos) and `assets/img/people/` (portrait photos).
 
@@ -53,7 +53,7 @@ All colors are defined as CSS variables in `style.css`:
 |---|---|---|
 | `--header-bg` | `#2A6F8A` | Header background, Latest News (`hero-card`) background |
 | `--accent` | `#1E5271` | Links, hover states |
-| `--crimson` | `#AC2B37` | Primary buttons |
+| `--crimson` | `#AC2B37` | Primary buttons, `.mission` card background |
 | `--bg` | `#FFFFFF` | Page background |
 | `--bg2` | `#EAF2F5` | Card backgrounds, footer |
 | `--line` | `#C8DDE5` | Borders |
@@ -69,11 +69,17 @@ Google Fonts are loaded in `_layouts/default.html`:
 ### Cards
 `.card` uses `--bg2` (pale teal) background with dark text. When used as a link, it is an `<a>` element; otherwise a `<div>`. `.hero-card` uses `--header-bg` (teal) background with white text for the Latest News section. `.person-photo` class styles portrait images: square crop, `max-width/max-height: 260px`, rounded corners.
 
+`.mission` — crimson (`--crimson`) background, white text, centered, italic body text. Used on `about.md` for the BioHub Mission Statement card. Contains an `<h2>` and `<p>`; use raw HTML (not Markdown) inside it so styling applies correctly.
+
+`.card-centered-list` — modifier class for `.card` that centers the card content while keeping list items left-aligned (`ul` is `display:inline-block; text-align:left`). Used on the "Our engagement model" card in `about.md`.
+
+When using Markdown syntax (headings, bold, bullet lists) inside a `<div>`, always add `markdown="1"` to the div attribute.
+
 ## Page Notes
 
 **`index.md`** — Lead paragraph → CTA buttons (crimson) → "What we do" cards (3-column grid, each links to `/services/`) → Latest News (`hero-card`). Title: "Building with Biology", subtitle: "Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts".
 
-**`about.md`** — Mission → Who we serve → Our engagement model → Leadership (cards grid: Dr. Young with photo/mailto, Jon Weaver) → Lead Partner Websites. Title: "About Us" (no subtitle).
+**`about.md`** — BioHub Mission Statement (`.mission` crimson card, centered, italic) → Who we serve (`.card`, centered text) → Our engagement model (`.card.card-centered-list`, centered bullet block) → Leadership (cards grid: Dr. Young with photo/mailto, Jon Weaver) → Lead Partner Websites. Title: "About Us" (no subtitle).
 
 **`partners.md`** — "Join the BioHub" button → partner cards from `partners.yml` → "Work with us" section.
 
