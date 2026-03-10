@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CLAUDE.md · The BioHub</title>
+    <meta name="description" content="Supporting the Bioindustrial Manufacturing Community in Central Massachusetts" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Lexend:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="/">
+      <img src="/assets/img/logos/biohub_logo.png" alt="The BioHub" class="header-logo" />
+      The BioHub
+    </a>
+
+    <nav class="site-nav">
+      
+        <a href="/"
+           class="">
+          Home
+        </a>
+      
+        <a href="/services/"
+           class="">
+          Services
+        </a>
+      
+        <a href="/news/"
+           class="">
+          News
+        </a>
+      
+        <a href="/partners/"
+           class="">
+          Partners
+        </a>
+      
+        <a href="/about/"
+           class="">
+          About
+        </a>
+      
+        <a href="/contact/"
+           class="">
+          Contact
+        </a>
+      
+    </nav>
+  </div>
+</header>
+
+
+    <main class="container">
+      <header class="page-header">
+  <h1 class="page-title">CLAUDE.md</h1>
+  
+</header>
+
+<h1 id="claudemd">CLAUDE.md</h1>
+
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+
+<h2 id="project-overview">Project Overview</h2>
+
+<p>This is a Jekyll-based static website for the Massachusetts BioHub, live at <code class="language-plaintext highlighter-rouge">https://massbiohub.org</code>. The <code class="language-plaintext highlighter-rouge">CNAME</code> file and <code class="language-plaintext highlighter-rouge">_config.yml</code> are already configured for this domain. The domain is locked at Wix until April 29 — transfer to Cloudflare Registrar at that point for free DNS management.</p>
+
+<p>Canonical partner URLs: WPI → <code class="language-plaintext highlighter-rouge">https://www.wpi.edu/</code>, MBI → <code class="language-plaintext highlighter-rouge">https://mbi.bio/</code>, MassTech → <code class="language-plaintext highlighter-rouge">https://masstech.org/</code>. Use these consistently across footer and content pages.</p>
+
+<h2 id="build--serve">Build &amp; Serve</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Build the site</span>
+jekyll build <span class="nt">--future</span>
+
+<span class="c"># Serve locally with live reload</span>
+jekyll serve <span class="nt">--future</span>
+
+<span class="c"># Build using Docker (matches CI)</span>
+docker run <span class="nt">-v</span> <span class="nv">$PWD</span>:/srv/jekyll jekyll/builder:latest jekyll build <span class="nt">--future</span>
+</code></pre></div></div>
+
+<p>There are no npm/pip dependencies — Jekyll is the only runtime dependency.</p>
+
+<h2 id="deployment">Deployment</h2>
+
+<p>Pushing to <code class="language-plaintext highlighter-rouge">main</code> triggers the GitHub Actions workflow (<code class="language-plaintext highlighter-rouge">.github/workflows/jekyll-docker.yml</code>), which builds and deploys the site automatically. Output goes to <code class="language-plaintext highlighter-rouge">_site/</code> (not committed). If the live site looks different from local preview after a push, do a hard refresh (<code class="language-plaintext highlighter-rouge">Ctrl+Shift+R</code>) to clear the browser cache.</p>
+
+<h2 id="architecture">Architecture</h2>
+
+<p>Content flows through three layers:</p>
+
+<p><strong>Data</strong> (<code class="language-plaintext highlighter-rouge">_data/</code>) → YAML files drive dynamic page sections:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">nav.yml</code> — Navigation order: Home · Services · News · Partners · About · Contact</li>
+  <li><code class="language-plaintext highlighter-rouge">partners.yml</code> — Partner cards rendered on <code class="language-plaintext highlighter-rouge">partners.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">news.yml</code> — News items rendered on <code class="language-plaintext highlighter-rouge">index.md</code> and <code class="language-plaintext highlighter-rouge">news.md</code></li>
+</ul>
+
+<p><strong>Layouts</strong> (<code class="language-plaintext highlighter-rouge">_layouts/</code>) → <code class="language-plaintext highlighter-rouge">page.html</code> extends <code class="language-plaintext highlighter-rouge">default.html</code> (root HTML shell with nav/footer)</p>
+
+<p><strong>Includes</strong> (<code class="language-plaintext highlighter-rouge">_includes/</code>) → Reusable components: <code class="language-plaintext highlighter-rouge">nav.html</code>, <code class="language-plaintext highlighter-rouge">footer.html</code>, <code class="language-plaintext highlighter-rouge">news-item.html</code>, <code class="language-plaintext highlighter-rouge">partner-card.html</code></p>
+
+<p>Content pages use Markdown with Jekyll frontmatter. Note: the Services page file is still named <code class="language-plaintext highlighter-rouge">facilities.md</code> but has <code class="language-plaintext highlighter-rouge">permalink: /services/</code> and title “Services”. Services page structure: 3 top summary cards (Network · Projects · Workforce Development) → Network section → Projects section (3 sub-cards: Process Development · Scale-Up · Strain Engineering, then Project Resources sub-section with BioFoundry · Scale-Up Lab · Builder’s Lab) → Workforce Development section.</p>
+
+<p>Styling is in <code class="language-plaintext highlighter-rouge">assets/css/style.css</code> (CSS variables + Grid layout, mobile breakpoint at 900px). Images are organized into <code class="language-plaintext highlighter-rouge">assets/img/logos/</code> (biohub, wpi, mbi, techhub logos) and <code class="language-plaintext highlighter-rouge">assets/img/people/</code> (portrait photos).</p>
+
+<h2 id="design-system">Design System</h2>
+
+<h3 id="colors">Colors</h3>
+<p>All colors are defined as CSS variables in <code class="language-plaintext highlighter-rouge">style.css</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Value</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--header-bg</code></td>
+      <td><code class="language-plaintext highlighter-rouge">#2A6F8A</code></td>
+      <td>Header background, Latest News (<code class="language-plaintext highlighter-rouge">hero-card</code>) background</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--accent</code></td>
+      <td><code class="language-plaintext highlighter-rouge">#1E5271</code></td>
+      <td>Links, hover states</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--crimson</code></td>
+      <td><code class="language-plaintext highlighter-rouge">#AC2B37</code></td>
+      <td>Primary buttons, <code class="language-plaintext highlighter-rouge">.mission</code> card background</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--bg</code></td>
+      <td><code class="language-plaintext highlighter-rouge">#FFFFFF</code></td>
+      <td>Page background</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--bg2</code></td>
+      <td><code class="language-plaintext highlighter-rouge">#EAF2F5</code></td>
+      <td>Card backgrounds, footer</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--line</code></td>
+      <td><code class="language-plaintext highlighter-rouge">#C8DDE5</code></td>
+      <td>Borders</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--fg</code></td>
+      <td><code class="language-plaintext highlighter-rouge">#3d5261</code></td>
+      <td>Body text, headings</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--muted</code></td>
+      <td><code class="language-plaintext highlighter-rouge">#527A8A</code></td>
+      <td>Secondary text</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="typography">Typography</h3>
+<p>Google Fonts are loaded in <code class="language-plaintext highlighter-rouge">_layouts/default.html</code>:</p>
+<ul>
+  <li><strong>Plus Jakarta Sans</strong> (400–800) — body text, navigation, all general content</li>
+  <li><strong>League Spartan</strong> (600) — site title (“The BioHub”) in the header only, <code class="language-plaintext highlighter-rouge">font-size: 34pt</code></li>
+  <li><strong>Lexend</strong> (600) — loaded but not currently applied; available for use</li>
+</ul>
+
+<h3 id="cards">Cards</h3>
+<p><code class="language-plaintext highlighter-rouge">.card</code> uses <code class="language-plaintext highlighter-rouge">--bg2</code> (pale teal) background with dark text. When used as a link, it is an <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> element; otherwise a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>. <code class="language-plaintext highlighter-rouge">.hero-card</code> uses <code class="language-plaintext highlighter-rouge">--header-bg</code> (teal) background with white text for the Latest News section. <code class="language-plaintext highlighter-rouge">.person-photo</code> class styles portrait images: square crop, <code class="language-plaintext highlighter-rouge">max-width/max-height: 260px</code>, rounded corners.</p>
+
+<p><code class="language-plaintext highlighter-rouge">.mission</code> — crimson (<code class="language-plaintext highlighter-rouge">--crimson</code>) background, white text, centered, italic body text. Used on <code class="language-plaintext highlighter-rouge">about.md</code> for the BioHub Mission Statement card. Contains an <code class="language-plaintext highlighter-rouge">&lt;h2&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>; use raw HTML (not Markdown) inside it so styling applies correctly.</p>
+
+<p><code class="language-plaintext highlighter-rouge">.card-centered-list</code> — modifier class for <code class="language-plaintext highlighter-rouge">.card</code> that centers the card content while keeping list items left-aligned (<code class="language-plaintext highlighter-rouge">ul</code> is <code class="language-plaintext highlighter-rouge">display:inline-block; text-align:left</code>). Used on the “Our engagement model” card in <code class="language-plaintext highlighter-rouge">about.md</code>.</p>
+
+<p>When using Markdown syntax (headings, bold, bullet lists) inside a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>, always add <code class="language-plaintext highlighter-rouge">markdown="1"</code> to the div attribute.</p>
+
+<h2 id="page-notes">Page Notes</h2>
+
+<p><strong><code class="language-plaintext highlighter-rouge">index.md</code></strong> — Lead paragraph → CTA buttons (crimson) → “What we do” cards (3-column grid, each links to <code class="language-plaintext highlighter-rouge">/services/</code>) → Latest News (<code class="language-plaintext highlighter-rouge">hero-card</code>). Title: “Building with Biology”, subtitle: “Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts”.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">about.md</code></strong> — BioHub Mission Statement (<code class="language-plaintext highlighter-rouge">.mission</code> crimson card, centered, italic) → Who we serve (<code class="language-plaintext highlighter-rouge">.card</code>, centered text) → Our engagement model (<code class="language-plaintext highlighter-rouge">.card.card-centered-list</code>, centered bullet block) → Leadership (cards grid: Dr. Young with photo/mailto, Jon Weaver) → Lead Partner Websites. Title: “About Us” (no subtitle).</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">partners.md</code></strong> — “Join the BioHub” button → partner cards from <code class="language-plaintext highlighter-rouge">partners.yml</code> → “Work with us” section.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">contact.md</code></strong> — “Get in touch” section with a red button (<code class="language-plaintext highlighter-rouge">.button</code>) linking to <code class="language-plaintext highlighter-rouge">mailto:biohub@wpi.edu</code> → nested bullet list of what to include when reaching out.</p>
+
+<h2 id="adding-content">Adding Content</h2>
+
+<ul>
+  <li><strong>New news item</strong>: Add an entry to <code class="language-plaintext highlighter-rouge">_data/news.yml</code> — appears automatically on homepage and news page.</li>
+  <li><strong>New partner</strong>: Add an entry to <code class="language-plaintext highlighter-rouge">_data/partners.yml</code> — appears on the partners page.</li>
+  <li><strong>New team member</strong>: Add a card to the Leadership section in <code class="language-plaintext highlighter-rouge">about.md</code>. Place portrait in <code class="language-plaintext highlighter-rouge">assets/img/people/</code>.</li>
+  <li><strong>New page</strong>: Create a <code class="language-plaintext highlighter-rouge">.md</code> file with frontmatter <code class="language-plaintext highlighter-rouge">layout: page</code>, <code class="language-plaintext highlighter-rouge">title:</code>, and optionally <code class="language-plaintext highlighter-rouge">subtitle:</code>, then add it to <code class="language-plaintext highlighter-rouge">_data/nav.yml</code>.</li>
+</ul>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-logos">
+      <div class="footer-logos-left">
+        <a href="https://www.wpi.edu/" target="_blank" rel="noreferrer">
+          <img src="/assets/img/logos/wpi_logo.png" alt="WPI" class="footer-logo footer-logo-wpi" />
+        </a>
+        <a href="https://mbi.bio/" target="_blank" rel="noreferrer">
+          <img src="/assets/img/logos/mbi_logo.png" alt="MBI" class="footer-logo footer-logo-mbi" />
+        </a>
+      </div>
+      <div class="footer-logos-right">
+        <a href="https://masstech.org/" target="_blank" rel="noreferrer">
+          <img src="/assets/img/logos/techhub_logo.png" alt="Massachusetts Technology Collaborative TechHub" class="footer-logo footer-logo-techhub" />
+        </a>
+      </div>
+    </div>
+    <small>© 2026 The BioHub · Built with Jekyll on GitHub Pages</small>
+  </div>
+</footer>
+
+  </body>
+</html>
