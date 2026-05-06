@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Partners
+title: Network
 subtitle: "Academic · Industry · Public sector · Community"
 permalink: /partners/
 ---

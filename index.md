@@ -6,44 +6,27 @@ permalink: /
 ---
 
 <p class="lead">
-  <strong>The BioHub</strong> brings together a community of partners to solve the biggest challenges in bioindustrial manufacturing.
-  Our facilities support process innovation, scale-up, strain optimization, and workforce development.
+  <strong>The BioHub</strong> is a shared bioindustrial manufacturing facility at Gateway Park in Worcester, Massachusetts, where startups, students, and researchers can grow useful products — medicines, materials, food ingredients, fuels — through fermentation and cell culture. Pilot-scale equipment for this kind of work is out of reach for most early-stage companies; the BioHub will put it within reach and will train hundreds of new students for the projected growth in this field. Led by Worcester Polytechnic Institute and Massachusetts Biomedical Initiatives, and funded by the Massachusetts Technology Collaborative, the BioHub anchors the Commonwealth's bioindustrial future on the Blackstone River — the birthplace of American industry.
 </p>
 
 <div class="cta-row">
-  <a class="button" href="{{ '/about/' | relative_url }}">Mission</a>
+  <a class="button" href="{{ '/about/' | relative_url }}">Learn about us</a>
   <a class="button" href="{{ '/services/' | relative_url }}">Explore services</a>
-  <a class="button" href="{{ '/partners/' | relative_url }}">Partner with us</a>
+  <a class="button" href="{{ '/work-with-us/' | relative_url }}">Work with us</a>
 </div>
 
-## What we do
+## What we're building
 <div class="cards">
-  <a class="card" href="{{ '/services/' | relative_url }}">
-    <h3 class="h3">De-risk scale-up</h3>
-    <p>Process development capabilities, scale-down models, and scale-up execution readiness.</p>
+  <a class="card" href="{{ '/services/#network' | relative_url }}">
+    <h3 class="h3">Network</h3>
+    <p>Connecting industry, academic, and public-sector partners across the bioindustrial community we're building in Central Massachusetts.</p>
   </a>
-  <a class="card" href="{{ '/services/' | relative_url }}">
-    <h3 class="h3">Enable builders</h3>
-    <p>Hands-on spaces and training for prototyping, instrumentation, and practical biomanufacturing skills.</p>
+  <a class="card" href="{{ '/services/#projects' | relative_url }}">
+    <h3 class="h3">Projects</h3>
+    <p>Sponsored and collaborative R&D in process development, scale-up, and strain engineering — coming online over the next three years.</p>
   </a>
-  <a class="card" href="{{ '/services/' | relative_url }}">
-    <h3 class="h3">Accelerate innovation</h3>
-    <p>High-throughput workflows for biological design-build-test-learn cycles.</p>
+  <a class="card" href="{{ '/services/#workforce' | relative_url }}">
+    <h3 class="h3">Workforce Development</h3>
+    <p>Hands-on training and certificate pathways for the next generation of biomanufacturing talent, in development with regional educators.</p>
   </a>
-</div>
-
-
-<div class="hero-card">
-  <h2 class="h3">Latest news</h2>
-  {% assign items = site.data.news | sort: "date" | reverse | slice: 0, 3 %}
-  {% if items.size > 0 %}
-    <ul class="clean-list">
-      {% for n in items %}
-        {% include news-item.html item=n %}
-      {% endfor %}
-    </ul>
-    <p><a href="{{ '/news/' | relative_url }}">All news →</a></p>
-  {% else %}
-    <p class="muted">No news yet.</p>
-  {% endif %}
 </div>
