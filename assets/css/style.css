@@ -149,6 +149,25 @@ a{color:var(--accent)}
   color:var(--muted);
 }
 
+details{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px 14px;
+  margin:10px 0;
+  background:var(--bg);
+}
+details[open]{background:var(--bg2);}
+summary{
+  cursor:pointer;
+  font-weight:600;
+  color:var(--accent);
+  list-style:none;
+  padding:2px 0;
+}
+summary::-webkit-details-marker{display:none;}
+summary::before{content:"▶ "; font-size:0.75em;}
+details[open] summary::before{content:"▼ ";}
+
 .site-footer{
   border-top:1px solid var(--line);
   margin-top:36px;
@@ -171,6 +190,11 @@ a{color:var(--accent)}
 .footer-logo-wpi{height:42px;}
 .footer-logo-mbi{height:30px;}
 .footer-logo-techhub{height:42px;}
+.footer-credit{margin:0 0 8px; font-size:0.9rem; color:var(--muted);}
+.footer-credit a{color:var(--muted);}
+.footer-links{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:10px;}
+.footer-links a{font-size:0.9rem; color:var(--muted); text-decoration:none;}
+.footer-links a:hover{color:var(--accent);}
 
 @media (max-width: 900px){
   .hero{grid-template-columns:1fr;}

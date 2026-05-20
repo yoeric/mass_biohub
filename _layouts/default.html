@@ -7,6 +7,17 @@
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}" />
 
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}" />
+    <meta property="og:description" content="{{ page.description | default: site.description | escape }}" />
+    <meta property="og:image" content="{{ '/assets/img/logos/og-default.png' | absolute_url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}" />
+    <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}" />
+    <meta name="twitter:image" content="{{ '/assets/img/logos/og-default.png' | absolute_url }}" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Lexend:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -26,5 +37,8 @@
     </main>
 
     {% include footer.html %}
+
+    <script data-goatcounter="https://biohub.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>
