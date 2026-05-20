@@ -4,10 +4,10 @@
   description: "Developing the knowledge, infrastructure, and workforce to lead the bioindustrial and AI revolution."
   tags: ["education", "research"]
 
-- name: "Massachusetts Biomedical Initiatives  (MBI)"
-  url: "https://www.mass.gov/orgs/massachusetts-bioindustrial-initiative"
+- name: "Massachusetts Biomedical Initiatives (MBI)"
+  url: "https://mbi.bio/"
   type: "Nonprofit"
-  description: "Helps emerging life sciences companies advance from concept to clinical trials, create jobs, and promote economic development."
+  description: "Nonprofit anchor institution building a bioindustrial cluster in Central Massachusetts — fostering innovation, workforce development, and economic growth."
   tags: ["policy", "ecosystem"]
 
 - name: "MassTech Collaborative"
