@@ -9,6 +9,21 @@ permalink: pretty
 plugins:
   - jekyll-sitemap
 
+# Don't render internal/dev files into the public site.
+# These files stay in the repo for tooling (Claude Code, contributors) but
+# are never served at massbiohub.org/<filename>/.
+exclude:
+  - CLAUDE.md
+  - SITE_PLAN.md
+  - AUDIT.md
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - .jekyll-cache/
+
 # Org metadata used in structured data
 org:
   legal_name: "The BioHub"
