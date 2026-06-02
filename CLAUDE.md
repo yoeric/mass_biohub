@@ -4,7 +4,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Jekyll-based static website for the Massachusetts BioHub, live at `https://massbiohub.org`. The `CNAME` file and `_config.yml` are already configured for this domain. The domain is locked at Wix until April 29 — transfer to Cloudflare Registrar at that point for free DNS management.
+This is a Jekyll-based static website for the Massachusetts BioHub, live at `https://massbiohub.org`. The `CNAME` file and `_config.yml` are already configured for this domain.
+
+**Pending: domain transfer from Wix → Cloudflare Registrar** (unlock date April 29 has passed — transfer is ready). Cloudflare is the right choice: at-cost pricing (~$9–11/yr for `.org`), free DNS, no renewal markup. Porkbun is a comparable alternative if a simpler UI is preferred.
+
+Transfer steps:
+1. Log into Wix → Domains → `massbiohub.org` → Advanced Settings → disable transfer lock
+2. Request EPP/authorization code from Wix (emailed to registrant address)
+3. Cloudflare → Domain Registration → Transfer Domains → enter `massbiohub.org` + EPP code
+4. Review detected DNS records, pay transfer fee
+5. Approve transfer via email (speeds up from ~5 days to immediate)
+6. After transfer, confirm these DNS records exist in Cloudflare (set to DNS only, not proxied):
+
+| Type | Name | Value |
+|------|------|-------|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `<github-username>.github.io` |
+
+After transfer: verify live site loads and GitHub Actions deployment still succeeds.
 
 Canonical partner URLs: WPI → `https://www.wpi.edu/`, MBI → `https://mbi.bio/`, MassTech → `https://masstech.org/`. Use these consistently across footer and content pages.
 
