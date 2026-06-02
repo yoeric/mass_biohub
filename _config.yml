@@ -1,8 +1,18 @@
 title: "The BioHub"
-description: "Supporting the Bioindustrial Manufacturing Community in Central Massachusetts"
+description: "A shared bioindustrial manufacturing facility at Gateway Park in Worcester — pilot-scale fermentation, automated strain engineering, and bioprocess development under one roof. Led by WPI and MBI, funded by MassTech."
 url: "https://massbiohub.org"
 baseurl: ""
 
 markdown: kramdown
 permalink: pretty
-plugins: []
+
+plugins:
+  - jekyll-sitemap
+
+# Org metadata used in structured data
+org:
+  legal_name: "The BioHub"
+  same_as:
+    - "https://www.wpi.edu/"
+    - "https://mbi.bio/"
+    - "https://masstech.org/"

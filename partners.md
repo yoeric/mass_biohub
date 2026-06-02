@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Network
-subtitle: "Academic · Industry · Public sector · Community"
+title: Partners
+subtitle: "Academic · Industry · Public sector"
+description: "The BioHub is led by WPI and Massachusetts Biomedical Initiatives and funded by the Massachusetts Technology Collaborative."
 permalink: /partners/
 ---
 
-<a class="button" href="{{ '/contact/' | relative_url }}">Join the BioHub</a>
+The BioHub is led by an anchor partnership between WPI and Massachusetts Biomedical Initiatives, with foundational support from the Massachusetts Technology Collaborative. We're actively expanding the BioHub partner network across industry, academia, and government — full network listings are coming soon.
 
 <div class="cards">
 {% for p in site.data.partners %}
@@ -15,7 +16,9 @@ permalink: /partners/
 
 <hr/>
 
-## Work with us
-- **Access:** shared facility use + training
-- **Collaboration:** sponsored projects, joint R&D
-- **Programs:** workforce development, demonstrations, testbeds
+<div class="card" markdown="1">
+
+## Join the BioHub
+We're looking for industry, academic, and equipment partners across the bioindustrial ecosystem. [Get in touch]({{ '/contact/' | relative_url }}) to talk through fit.
+
+</div>

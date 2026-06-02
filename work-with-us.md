@@ -2,6 +2,7 @@
 layout: page
 title: Work With Us
 subtitle: "Who we work with · How to get started"
+description: "Engagement paths for startup founders, industry partners, researchers, educators, and job seekers."
 permalink: /work-with-us/
 ---
 
