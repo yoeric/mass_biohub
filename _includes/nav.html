@@ -1,14 +1,15 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="site-title" href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/img/logos/biohub_logo.png' | relative_url }}" alt="{{ site.title }}" class="header-logo" />
-      {{ site.title }}
+      <img src="{{ '/assets/img/logos/biohub_mark_white.png' | relative_url }}" alt="{{ site.title }}" class="header-logo" />
+      <span class="wordmark">{{ site.title }}</span>
+      <span class="site-tagline">Building with Biology</span>
     </a>
 
     <nav class="site-nav">
       {% for item in site.data.nav %}
         <a href="{{ item.href | relative_url }}"
-           class="{% if page.url == item.href or page.permalink == item.href %}active{% endif %}">
+           class="{% if page.url == item.href or page.permalink == item.href %}active {% endif %}{% if item.cta %}nav-cta{% endif %}">
           {{ item.label }}
         </a>
       {% endfor %}

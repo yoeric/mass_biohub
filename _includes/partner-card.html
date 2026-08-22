@@ -1,15 +1,15 @@
-<div class="card">
-  <h3 class="h3">
+<div class="card partner">
+  {% if include.partner.type %}
+    <span class="kind">{{ include.partner.type }}</span>
+  {% endif %}
+
+  <h3>
     {% if include.partner.url %}
       <a href="{{ include.partner.url }}" target="_blank" rel="noreferrer">{{ include.partner.name }}</a>
     {% else %}
       {{ include.partner.name }}
     {% endif %}
   </h3>
-
-  {% if include.partner.type %}
-    <p class="muted"><strong>Type:</strong> {{ include.partner.type }}</p>
-  {% endif %}
 
   {% if include.partner.description %}
     <p>{{ include.partner.description }}</p>
