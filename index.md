@@ -1,81 +1,74 @@
 ---
-layout: page
+layout: default
 title: "Building with Biology"
 subtitle: "Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts"
-description: "A shared bioindustrial manufacturing facility at Gateway Park in Worcester — pilot-scale fermentation, automated strain engineering, and bioprocess development under one roof."
+description: "Shared access to the equipment, process development, and trained people to run fermentation at pilot scale — so a product invented at the bench can be made in Central Massachusetts."
 permalink: /
 ---
 
-<p class="lead">
-  <strong>The BioHub</strong> is a shared bioindustrial manufacturing facility at Gateway Park in Worcester, built so early-stage companies can run pilot-scale fermentations, engineer microbial hosts, and develop new bioprocesses under one roof — without queuing for slots at an offshore CMO or building the infrastructure themselves. Led by Worcester Polytechnic Institute and Massachusetts Biomedical Initiatives and funded by the Massachusetts Technology Collaborative, the BioHub exists to compress the time, cost, and risk between a promising strain and a manufacturable product.
-</p>
-
-<div class="cta-row">
-  <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry">Email the BioHub</a>
-  <a class="button button-secondary" href="{{ '/services/' | relative_url }}">Explore services</a>
-  <a class="button button-secondary" href="{{ '/work-with-us/' | relative_url }}">Work with us</a>
+<div class="hero">
+  <div>
+    <p class="eyebrow">Gateway Park · Worcester, MA</p>
+    <h1>The BioHub</h1>
+    <p class="descriptor">Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts</p>
+    <p class="lead">The BioHub will give companies in Central Massachusetts shared access to the equipment, process development, and trained people to run fermentation at pilot scale — <strong>so a product invented at the bench can be made here.</strong></p>
+    <div class="cta-row">
+      <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%20(network%20%2F%20facilities%20%2F%20curriculum%20%2F%20hiring%20trainees)%3A%0AProject%20type%20(if%20applicable%20%E2%80%94%20scale-up%20%2F%20prototyping%20%2F%20process%20development%20%2F%20strain%20engineering)%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%3A">Email the BioHub →</a>
+      <a class="button button-secondary" href="{{ '/services/' | relative_url }}">Explore services</a>
+    </div>
+  </div>
+  <img class="hero-mark" src="{{ '/assets/img/logos/biohub_logo_slate.png' | relative_url }}" alt="" />
 </div>
 
-## By the numbers
-<div class="cards">
-  <div class="card">
-    <h3 class="h3">$5M</h3>
-    <p>Initial MassTech investment to launch the BioHub.</p>
-  </div>
-  <div class="card">
-    <h3 class="h3">1 of 5</h3>
-    <p>NSF-funded Biofoundries in the country — anchoring our strain-engineering capability.</p>
-  </div>
-  <div class="card">
-    <h3 class="h3">35+</h3>
-    <p>Supporting partners across industry, academia, and government.</p>
-  </div>
-  <div class="card">
-    <h3 class="h3">3,000+</h3>
-    <p>Biomanufacturing professionals trained at WPI's BETC since 2013 — the foundation we're building on.</p>
-  </div>
-  <div class="card">
-    <h3 class="h3">500</h3>
-    <p>New bioindustrial trainees targeted over the next three years.</p>
-  </div>
-  <div class="card">
-    <h3 class="h3">1L–150L</h3>
-    <p>Planned pilot-scale fermentation range, with integrated downstream operations.</p>
-  </div>
-</div>
-
-## What we're building
+<h2>What we're building</h2>
 <div class="cards">
   <a class="card" href="{{ '/services/#scale' | relative_url }}">
-    <h3 class="h3">Scale your process</h3>
-    <p>Pilot-scale fermentation from 1L to 150L with integrated downstream operations and AI-driven process control.</p>
+    <span class="card-i">Infrastructure</span>
+    <h3>Scale your process</h3>
+    <p>Fermentation at 1 L, 10 L, and 100 L, with media formulation and downstream operations bookable on their own. In design and permitting.</p>
+    <span class="go">Pilot Facility →</span>
   </a>
-  <a class="card" href="{{ '/services/#engineer' | relative_url }}">
-    <h3 class="h3">Engineer your strain</h3>
-    <p>Automated design-build-test-learn workflows in the BioFoundry — high-throughput strain construction, screening, and AI-driven optimization.</p>
-  </a>
+  <div class="card card-multi">
+    <span class="card-i">Innovation</span>
+    <h3>Iterate before you scale</h3>
+    <p>Design-build-test-learn cycles for strains and processes, plus prototyping space for new bioprocess hardware. Screening at CERES today; the rest in build-out.</p>
+    <span class="go-multi">
+      <a href="{{ '/services/#engineer' | relative_url }}">BioFoundry →</a>
+      <a href="{{ '/services/#prototype' | relative_url }}">Builder&rsquo;s Lab →</a>
+    </span>
+  </div>
   <a class="card" href="{{ '/services/#train' | relative_url }}">
-    <h3 class="h3">Train your team</h3>
-    <p>Hands-on, competency-based curricula with AR/VR-enabled instruction, in development with regional educators.</p>
+    <span class="card-i">Workforce</span>
+    <h3>Train your team</h3>
+    <p>Competency-based tracks in bioreactor operation, remote monitoring, and downstream processing. In development with Worcester-area colleges.</p>
+    <span class="go">BETC →</span>
   </a>
 </div>
 
-## Who we work with
-<div class="cards">
-  <a class="card" href="{{ '/work-with-us/#startup' | relative_url }}">
-    <h3 class="h3">Startup founders</h3>
-    <p>Facility access without equity or long procurement cycles.</p>
-  </a>
-  <a class="card" href="{{ '/work-with-us/#industry' | relative_url }}">
-    <h3 class="h3">Industry partners</h3>
-    <p>Sustained research partnerships with a clear IP framework.</p>
-  </a>
-  <a class="card" href="{{ '/work-with-us/#research' | relative_url }}">
-    <h3 class="h3">Researchers &amp; educators</h3>
-    <p>Joint R&amp;D, curriculum collaboration, and shared infrastructure.</p>
-  </a>
-  <a class="card" href="{{ '/work-with-us/#workforce' | relative_url }}">
-    <h3 class="h3">Job seekers &amp; employers</h3>
-    <p>Competency-based training and hiring pathways for bioindustrial talent.</p>
-  </a>
+<h2>Capacity: 100 µL to 100 L</h2>
+<p class="lead">Every scale from screening to 100 L runs in Worcester today. CERES screens at microliter volumes; the Bioprocess Center takes microbial fermentation from 1 L to 100 L on contract. What the BioHub adds is newer equipment, shared access for companies without a WPI research relationship, and a <strong>downstream train built for bioindustrial products rather than pharmaceuticals</strong>.</p>
+
+<div class="ladder">
+  <div class="rung"><div class="vessel" style="height:50px;--fill:30%"></div><div><span class="rung-n">100 µL</span><span class="rung-l">Screening</span><span class="rung-s is-now">CERES</span></div></div>
+  <div class="rung"><div class="vessel" style="height:86px;--fill:38%"></div><div><span class="rung-n">500 mL</span><span class="rung-l">Microbioreactor</span><span class="rung-s is-now">CERES</span></div></div>
+  <div class="rung"><div class="vessel" style="height:120px;--fill:46%"></div><div><span class="rung-n">1 L</span><span class="rung-l">Bench</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
+  <div class="rung"><div class="vessel" style="height:160px;--fill:52%"></div><div><span class="rung-n">10 L</span><span class="rung-l">Development</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
+  <div class="rung"><div class="vessel vessel-pilot" style="height:202px;--fill:58%"></div><div><span class="rung-n">100 L</span><span class="rung-l">Pilot</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
+</div>
+<div class="ladder-foot">
+  <span>Every rung runs today, on contract</span>
+  <span>Newer equipment and bioindustrial downstream at 1 L–100 L are in build-out</span>
+</div>
+
+<h2>By the numbers</h2>
+
+<div class="bleed bleed-tint statband">
+  <div class="stats">
+    <div class="stat"><span class="stat-l">MassTech award</span><span class="stat-n">$5.2M</span><p>Initial investment to launch the BioHub.</p></div>
+    <div class="stat"><span class="stat-l">Federal</span><span class="stat-n">NSF BioFoundry</span><p>Part of one of five NSF BioFoundries in the country.</p></div>
+    <div class="stat"><span class="stat-l">Network</span><span class="stat-n">35+</span><p>Supporting partners across industry, academia, and government.</p></div>
+    <div class="stat"><span class="stat-l">Trained at BETC</span><span class="stat-n">3,000+</span><p>Biomanufacturing professionals in its first 11 years.</p></div>
+    <div class="stat"><span class="stat-l">Target by 2028</span><span class="stat-n">500</span><p>New bioindustrial trainees over the next three years.</p></div>
+    <div class="stat"><span class="stat-l">Available today</span><span class="stat-n">100 µL–100 L</span><p>Through WPI CERES and the WPI Bioprocess Center. Shared capacity at 1 L–100 L is in build-out.</p></div>
+  </div>
 </div>
