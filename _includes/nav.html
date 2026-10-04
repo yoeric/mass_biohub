@@ -1,18 +1,18 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="site-title" href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/img/logos/biohub_mark_white.png' | relative_url }}" alt="{{ site.title }}" class="header-logo" />
+      <img src="{{ '/assets/img/logos/biohub_mark_white.png' | relative_url }}" alt="" class="header-logo" />
       <span class="wordmark">{{ site.title }}</span>
       <span class="site-tagline">Building with Biology</span>
     </a>
 
     <nav class="site-nav">
-      {% for item in site.data.nav %}
-        <a href="{{ item.href | relative_url }}"
-           class="{% if page.url == item.href or page.permalink == item.href %}active {% endif %}{% if item.cta %}nav-cta{% endif %}">
-          {{ item.label }}
-        </a>
-      {% endfor %}
+      {%- for item in site.data.nav %}
+        {%- assign classes = "" -%}
+        {%- if page.url == item.href or page.permalink == item.href %}{% assign classes = "active" %}{% endif -%}
+        {%- if item.cta %}{% assign classes = classes | append: " nav-cta" | strip %}{% endif %}
+        <a href="{{ item.href | relative_url }}"{% if classes != "" %} class="{{ classes }}"{% endif %}>{{ item.label }}</a>
+      {%- endfor %}
     </nav>
   </div>
 </header>

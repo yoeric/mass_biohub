@@ -19,7 +19,7 @@ permalink: /partners/
   <div class="inner">
     <h2>Join the BioHub</h2>
     <p class="lead">We're looking for industry, academic, and equipment partners.</p>
-    <div class="cta-row" style="margin-bottom:0">
+    <div class="cta-row">
       <a class="button" href="{{ '/contact/' | relative_url }}">Talk through fit →</a>
     </div>
   </div>

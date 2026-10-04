@@ -8,7 +8,7 @@ permalink: /services/
 
 <p class="lead">The BioHub closes three gaps that have held back bioindustrial manufacturing in Central Massachusetts: shared <strong>pilot-scale capacity</strong>, data-driven <strong>process optimization</strong>, and <strong>workforce training</strong> designed for non-therapeutic biomanufacturing. Screening and contract fermentation are available today through WPI CERES and the WPI Bioprocess Center; the full portfolio comes online as pilot infrastructure is built out over the next three years.</p>
 
-<p class="lead">We work three ways: <strong>fee-for-use</strong> access, <strong>contracts</strong>, and <strong>collaborative research</strong>. Only collaborative research involves WPI IP interests. Get in touch and we&rsquo;ll scope which one fits.</p>
+<p class="lead">We work three ways: <strong>fee-for-use</strong> access, <strong>contracts</strong>, and <strong>collaborative research</strong>. Only collaborative research involves WPI IP interests. Get in touch and we'll scope which one fits.</p>
 
 <div class="split" id="today">
   <div class="split-l">Available today</div>
@@ -25,7 +25,7 @@ permalink: /services/
       </ul>
     </details>
     <div class="cta-row">
-      <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%3A%20CERES%20access%0AProject%20type%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%3A">Book time on CERES &rarr;</a>
+      {% include inquiry.html label="Book time on CERES →" interest="CERES access" %}
     </div>
 
     <h2>WPI Bioprocess Center</h2>
@@ -41,7 +41,7 @@ permalink: /services/
       </ul>
     </details>
     <div class="cta-row">
-      <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%3A%20Bioprocess%20Center%20contract%20fermentation%0AProject%20type%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%3A">Talk to us about contract fermentation &rarr;</a>
+      {% include inquiry.html label="Talk to us about contract fermentation →" interest="Bioprocess Center contract fermentation" %}
     </div>
 
     <p class="muted">Both facilities operate now. The four services below are being built.</p>
@@ -68,7 +68,7 @@ permalink: /services/
       </ul>
     </details>
     <div class="cta-row">
-      <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%3A%20facilities%0AProject%20type%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%3A">Talk to us about scale-up &rarr;</a>
+      {% include inquiry.html label="Talk to us about scale-up →" interest="facilities" %}
     </div>
   </div>
 </div>
@@ -87,26 +87,26 @@ permalink: /services/
       </ul>
     </details>
     <div class="cta-row">
-      <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%3A%20strain%20engineering%0AProject%20type%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%3A">Talk to us about strain work &rarr;</a>
+      {% include inquiry.html label="Talk to us about strain work →" interest="strain engineering" %}
     </div>
   </div>
 </div>
 
 <div class="split" id="prototype">
-  <div class="split-l">03 — MBI Builder&rsquo;s Lab</div>
+  <div class="split-l">03 — MBI Builder's Lab</div>
   <div class="prose">
     <h2>Build the equipment</h2>
-    <p>The <strong>MBI Builder&rsquo;s Lab</strong> is a 4,500 sq ft prototyping space operated with MBI, where process-technology startups design, build, and test new bioreactor and unit-operation hardware alongside the people who would run it. Co-location with MBI connects equipment developers to the regional bioindustrial network. Build-out is underway.</p>
+    <p>The <strong>MBI Builder's Lab</strong> is a 4,500 sq ft prototyping space operated with MBI, where process-technology startups design, build, and test new bioreactor and unit-operation hardware alongside the people who would run it. Co-location with MBI connects equipment developers to the regional bioindustrial network. Build-out is underway.</p>
     <p>The gap is sharpest downstream. Regional capacity was built for pharmaceutical purification, so a company developing separation, evaporation, or drying equipment for bioindustrial streams has nowhere to test it against real fermentation broth at volume. The Pilot Facility, a short walk away, supplies the broth.</p>
     <details>
-      <summary>Planned equipment &amp; specs — Builder&rsquo;s Lab</summary>
+      <summary>Planned equipment &amp; specs — Builder's Lab</summary>
       <ul>
         <li>Shared rapid-prototyping equipment (planned)</li>
         <li>Co-location with MBI to connect equipment developers with the regional bioindustrial network</li>
       </ul>
     </details>
     <div class="cta-row">
-      <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%3A%20Builder%27s%20Lab%20%2F%20prototyping%0AProject%20type%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%3A">Talk to us about prototyping &rarr;</a>
+      {% include inquiry.html label="Talk to us about prototyping →" interest="Builder's Lab / prototyping" %}
     </div>
   </div>
 </div>
@@ -140,5 +140,5 @@ permalink: /services/
 <p>These tracks support job seekers, mid-career retraining candidates, and incumbent workers shifting from related industries. A <strong>Bioindustrial Process Operation Certificate</strong> is planned for launch in 2028.</p>
 
 <div class="cta-row">
-      <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%3A%20curriculum%20%2F%20workforce%0AProject%20type%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%3A">Talk to us about training &rarr;</a>
-    </div>
+  {% include inquiry.html label="Talk to us about training →" interest="curriculum / workforce" %}
+</div>

@@ -40,7 +40,7 @@ permalink: /about/
   <div class="prose">
     <p>The BioHub is anchored at <strong>WPI's Gateway Park in Worcester</strong> — the heart of the Commonwealth and one of New England's fastest-growing cities. In 2022 CBRE ranked Worcester <strong>15th in the country</strong> for life-sciences research talent, citing "some of the strongest concentrations of various life sciences researchers in the US." The region's industrial heritage along the Blackstone River — birthplace of the American Industrial Revolution — has given way to a modern innovation economy led by healthcare, education, and the biosciences.</p>
     <p>We build on top of WPI's <strong>Biomanufacturing Education and Training Center (BETC)</strong>, which trained more than <strong>3,000 biomanufacturing professionals</strong> in its first 11 years, and WPI's <strong>Cell Engineering Research Equipment Suite (CERES)</strong>, an established research facility serving a multi-year base of WPI faculty and partner companies.</p>
-    <p>MBI's <a href="https://mbi.bio/wp-content/uploads/2024/07/Regional-Biomanufacturing-Strategy.pdf">Regional Biomanufacturing Strategy</a> defined the gaps the BioHub is built to close. New pilot and process-development infrastructure comes online over the next three years.</p>
+    <p>MBI's <a href="https://mbi.bio/wp-content/uploads/2024/07/Regional-Biomanufacturing-Strategy.pdf" target="_blank" rel="noreferrer">Regional Biomanufacturing Strategy</a> defined the gaps the BioHub is built to close. New pilot and process-development infrastructure comes online over the next three years.</p>
   </div>
 </div>
 

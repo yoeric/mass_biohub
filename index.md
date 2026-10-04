@@ -13,7 +13,7 @@ permalink: /
     <p class="descriptor">Driving the Bioindustrial Manufacturing Revolution in Central Massachusetts</p>
     <p class="lead">The BioHub will give companies in Central Massachusetts shared access to the equipment, process development, and trained people to run fermentation at pilot scale — <strong>so a product invented at the bench can be made here.</strong></p>
     <div class="cta-row">
-      <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%20(network%20%2F%20facilities%20%2F%20curriculum%20%2F%20hiring%20trainees)%3A%0AProject%20type%20(if%20applicable%20%E2%80%94%20scale-up%20%2F%20prototyping%20%2F%20process%20development%20%2F%20strain%20engineering)%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%3A">Email the BioHub →</a>
+      {% include inquiry.html label="Email the BioHub →" project="general" %}
       <a class="button button-secondary" href="{{ '/services/' | relative_url }}">Explore services</a>
     </div>
   </div>
@@ -34,7 +34,7 @@ permalink: /
     <p>Design-build-test-learn cycles for strains and processes, plus prototyping space for new bioprocess hardware. Screening at CERES today; the rest in build-out.</p>
     <span class="go-multi">
       <a href="{{ '/services/#engineer' | relative_url }}">BioFoundry →</a>
-      <a href="{{ '/services/#prototype' | relative_url }}">Builder&rsquo;s Lab →</a>
+      <a href="{{ '/services/#prototype' | relative_url }}">Builder's Lab →</a>
     </span>
   </div>
   <a class="card" href="{{ '/services/#train' | relative_url }}">
@@ -49,11 +49,11 @@ permalink: /
 <p class="lead">Every scale from screening to 100 L runs in Worcester today. CERES screens at microliter volumes; the Bioprocess Center takes microbial fermentation from 1 L to 100 L on contract. What the BioHub adds is newer equipment, shared access for companies without a WPI research relationship, and a <strong>downstream train built for bioindustrial products rather than pharmaceuticals</strong>.</p>
 
 <div class="ladder">
-  <div class="rung"><div class="vessel" style="height:50px;--fill:30%"></div><div><span class="rung-n">100 µL</span><span class="rung-l">Screening</span><span class="rung-s is-now">CERES</span></div></div>
-  <div class="rung"><div class="vessel" style="height:86px;--fill:38%"></div><div><span class="rung-n">500 mL</span><span class="rung-l">Microbioreactor</span><span class="rung-s is-now">CERES</span></div></div>
-  <div class="rung"><div class="vessel" style="height:120px;--fill:46%"></div><div><span class="rung-n">1 L</span><span class="rung-l">Bench</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
-  <div class="rung"><div class="vessel" style="height:160px;--fill:52%"></div><div><span class="rung-n">10 L</span><span class="rung-l">Development</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
-  <div class="rung"><div class="vessel vessel-pilot" style="height:202px;--fill:58%"></div><div><span class="rung-n">100 L</span><span class="rung-l">Pilot</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
+  <div class="rung"><div class="vessel" style="--h:50px; --fill:30%"></div><div><span class="rung-n">100 µL</span><span class="rung-l">Screening</span><span class="rung-s is-now">CERES</span></div></div>
+  <div class="rung"><div class="vessel" style="--h:86px; --fill:38%"></div><div><span class="rung-n">500 mL</span><span class="rung-l">Microbioreactor</span><span class="rung-s is-now">CERES</span></div></div>
+  <div class="rung"><div class="vessel" style="--h:120px; --fill:46%"></div><div><span class="rung-n">1 L</span><span class="rung-l">Bench</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
+  <div class="rung"><div class="vessel" style="--h:160px; --fill:52%"></div><div><span class="rung-n">10 L</span><span class="rung-l">Development</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
+  <div class="rung"><div class="vessel vessel-pilot" style="--h:202px; --fill:58%"></div><div><span class="rung-n">100 L</span><span class="rung-l">Pilot</span><span class="rung-s is-now">Bioprocess Center</span></div></div>
 </div>
 <div class="ladder-foot">
   <span>Every rung runs today, on contract</span>

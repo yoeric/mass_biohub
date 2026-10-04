@@ -1,16 +1,21 @@
-- name: "WPI"
+# Anchor partners. Feeds the /partners/ cards, the footer logos, and the
+# JSON-LD sameAs list. `id` is how templates look a partner up.
+- id: wpi
+  name: "WPI"
   url: "https://www.wpi.edu/"
   type: "Academic"
   description: "Developing the knowledge, infrastructure, and workforce to lead the bioindustrial and AI revolution."
   tags: ["education", "research"]
 
-- name: "Massachusetts Biomedical Initiatives (MBI)"
+- id: mbi
+  name: "Massachusetts Biomedical Initiatives (MBI)"
   url: "https://mbi.bio/"
   type: "Nonprofit"
   description: "Nonprofit anchor institution building a bioindustrial cluster in Central Massachusetts — fostering innovation, workforce development, and economic growth."
   tags: ["policy", "ecosystem"]
 
-- name: "MassTech Collaborative"
+- id: masstech
+  name: "MassTech Collaborative"
   url: "https://masstech.org/"
   type: "Economic development"
   description: "Invests in innovation, infrastructure, and talent to strengthen Massachusetts."
