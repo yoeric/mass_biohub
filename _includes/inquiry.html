@@ -1,0 +1,42 @@
+{%- comment -%}
+  The single contact point (SITE_PLAN: every CTA is the same pre-filled mailto).
+  Write the template in plain text here; it is encoded once, below.
+
+  label     button text (required)
+  class     default "button"
+  interest  fills "Engagement interest: …"; omit for the general picker
+  project   "list"     → Project type (scale-up / prototyping / …):
+            "optional" → Project type (if applicable):
+            "general"  → Project type (if applicable — scale-up / …):
+            omitted    → Project type:
+  omit      space-separated lines to drop: project timeline confidentiality
+  prompt    closing line; default "Tell us about your project:"
+  hello     "yes" switches to the low-commitment "Following along" note
+{%- endcomment -%}
+{%- assign kinds = "scale-up / prototyping / process development / strain engineering" -%}
+{%- if include.hello == "yes" -%}
+  {%- assign subject = "BioHub inquiry — [your name]" -%}
+  {%- assign body = "Name:|Organization (if applicable):||How did you hear about us, and what are you curious about?" -%}
+{%- else -%}
+  {%- assign subject = "BioHub inquiry — [your organization]" -%}
+  {%- assign omit = include.omit | default: "" | split: " " -%}
+  {%- if include.interest -%}
+    {%- assign body = "Organization:|Point of contact:|Engagement interest: " | append: include.interest | append: "|" -%}
+  {%- else -%}
+    {%- assign body = "Organization:|Point of contact:|Engagement interest (network / facilities / curriculum / hiring trainees):|" -%}
+  {%- endif -%}
+  {%- unless omit contains "project" -%}
+    {%- case include.project -%}
+      {%- when "list" -%}{%- assign project = "Project type (" | append: kinds | append: "):|" -%}
+      {%- when "optional" -%}{%- assign project = "Project type (if applicable):|" -%}
+      {%- when "general" -%}{%- assign project = "Project type (if applicable — " | append: kinds | append: "):|" -%}
+      {%- else -%}{%- assign project = "Project type:|" -%}
+    {%- endcase -%}
+    {%- assign body = body | append: project -%}
+  {%- endunless -%}
+  {%- unless omit contains "timeline" -%}{%- assign body = body | append: "Timeline:|" -%}{%- endunless -%}
+  {%- unless omit contains "confidentiality" -%}{%- assign body = body | append: "Confidentiality constraints:|" -%}{%- endunless -%}
+  {%- assign prompt = include.prompt | default: "Tell us about your project:" -%}
+  {%- assign body = body | append: "|" | append: prompt -%}
+{%- endif -%}
+<a class="{{ include.class | default: 'button' }}" href="mailto:{{ site.email }}?subject={{ subject | url_encode | replace: '+', '%20' }}&amp;body={{ body | url_encode | replace: '+', '%20' | replace: '%7C', '%0A' }}">{{ include.label }}</a>

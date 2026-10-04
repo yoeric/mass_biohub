@@ -9,13 +9,13 @@ permalink: /contact/
 <p class="lead">Tell us what you're trying to make, and at what scale. We reply within two business days.</p>
 
 <div class="cta-row">
-  <a class="button" href="mailto:biohub@wpi.edu?subject=BioHub%20inquiry%20%E2%80%94%20%5Byour%20organization%5D&body=Organization%3A%0APoint%20of%20contact%3A%0AEngagement%20interest%20(network%20%2F%20facilities%20%2F%20curriculum%20%2F%20hiring%20trainees)%3A%0AProject%20type%20(if%20applicable%20%E2%80%94%20scale-up%20%2F%20prototyping%20%2F%20process%20development%20%2F%20strain%20engineering)%3A%0ATimeline%3A%0AConfidentiality%20constraints%3A%0A%0ATell%20us%20about%20your%20project%20(or%20just%20say%20hi)%3A">Email the BioHub →</a>
+  {% include inquiry.html label="Email the BioHub →" project="general" prompt="Tell us about your project (or just say hi):" %}
 </div>
 
 <div class="cgrid">
   <div>
     <b>Where we are</b>
-    <p>WPI Gateway Park<br />50 Prescott Street<br />Worcester, MA 01605</p>
+    <p>{{ site.address.place }}<br />{{ site.address.street }}<br />{{ site.address.locality }}, {{ site.address.region }} {{ site.address.postal_code }}</p>
   </div>
   <div>
     <b>Builder's Lab</b>

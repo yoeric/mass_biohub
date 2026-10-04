@@ -1,0 +1,22 @@
+name: Jekyll site CI
+
+# Builds with the same github-pages gem (Jekyll 3.10) that GitHub Pages
+# uses to publish, so a green check here means Pages will build too.
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: "3.3"
+        bundler-cache: true
+    - name: Build the site
+      run: bundle exec jekyll build --future
