@@ -19,3 +19,7 @@ Thumbs.db
 # Local env
 .env
 .env.local
+
+# Internal Claude notes (not public)
+CLAUDE.md
+SITE_PLAN.md
