@@ -20,7 +20,7 @@ redirect_from:
       <a class="button button-secondary" href="{{ '/about/' | relative_url }}">About the BioHub</a>
     </div>
   </div>
-  <img class="hero-mark" src="{{ '/assets/img/logos/biohub_logo_slate.png' | relative_url }}" alt="" />
+  <img class="hero-mark" src="{{ '/assets/img/logos/biohub_logo_slate.png' | relative_url }}" width="598" height="425" alt="" />
 </div>
 
 <h2>What we're building</h2>
