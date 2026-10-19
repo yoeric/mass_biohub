@@ -10,10 +10,7 @@
      only saturated colour on the site. */
   --crimson:#AC2B37;        /* WPI Crimson — Pantone 187 C */
   --crimson-dark:#8E2030;
-  --crimson-light:#ED9197;  /* ONLY for crimson-as-text on the navy band */
-  --crimson-tint:#F7E9EA;
-
-  --navy-900:#1E2939;       /* dark band ground */
+  --navy-900:#1E2939;       /* partner band ground */
   --navy-700:#323F52;       /* links, stat numerals */
   --navy-500:#4A586D;       /* structural labels */
   --navy-100:#E8ECF3;       /* hover wash */
@@ -25,12 +22,11 @@
   --muted:#5B6B79;
   --rule:#DFE4E9;
 
-  /* On colour — type and rules over the crimson header, crimson mission
-     panel, and navy band. Five steps; do not add ad-hoc alphas. */
+  /* On colour — type and rules over the crimson header and crimson
+     mission panel. Do not add ad-hoc alphas. */
   --on-color:#FFFFFF;
   --on-color-2:rgba(255,255,255,.85);       /* secondary text: 5.22 on crimson */
   --on-color-rule:rgba(255,255,255,.35);    /* dividers and control borders */
-  --on-color-rule-faint:rgba(255,255,255,.18);
   --on-color-wash:rgba(255,255,255,.12);    /* hover background */
   --on-color-edge:rgba(0,0,0,.20);          /* header bottom edge */
   --on-dark:#EDF3FB;        /* body text on the navy band */
@@ -82,6 +78,8 @@ a{color:var(--navy-700)}
 .bleed-tint{background:var(--ground-2); border-block:1px solid var(--rule);}
 /* no dead air between a closing band and the footer */
 .container > .bleed:last-child{margin-bottom:0;}
+.container:has(> .bleed:last-child){padding-bottom:0;}
+.bleed:has(+ .bleed){margin-bottom:0;}   /* stacked bands touch */
 
 /* ---------------------------------------------------------------- type ---- */
 h1,h2,h3{font-family:var(--display); letter-spacing:var(--track-display); text-wrap:balance;}
@@ -93,22 +91,19 @@ p{margin:0 0 var(--s5);}
 
 .lead{font-size:var(--fs-lead); color:var(--muted); max-width:62ch; margin-bottom:var(--s6);}
 .lead strong{color:var(--fg); font-weight:600;}
-.muted{color:var(--muted);}
 
 /* Mono label — the one small-caps voice on the site, defined once.
-   Colour carries the role: crimson = identity (eyebrow, role, partner kind, live rung),
+   Colour carries the role: crimson = identity (eyebrow, role, partner kind),
    navy-500 = structure (page subtitle, stat and split labels, contact heads),
    muted = metadata (the default). Components set only colour and layout below. */
-.eyebrow,.page-subtitle,.stat-l,.rung-s,.rung-l,.ladder-foot,.card-i,.split-l,
-.prow .num,.person .role,.partner .kind,.pending,.cgrid b,summary{
+.eyebrow,.page-subtitle,.stat-l,.card-i,.split-l,
+.person .role,.partner .kind,.cgrid b{
   font-family:var(--mono); font-size:var(--fs-label); font-weight:500;
   letter-spacing:var(--track-label); text-transform:uppercase; color:var(--muted);
 }
 
 .eyebrow{color:var(--crimson); margin:0 0 var(--s4); display:flex; align-items:center; gap:var(--s3);}
 .eyebrow::after{content:""; flex:1; height:1px; background:var(--rule);}
-.bleed-dark .eyebrow{color:var(--crimson-light);}
-.bleed-dark .eyebrow::after{background:var(--on-color-rule-faint);}
 
 /* -------------------------------------------------------- accessibility ---- */
 .skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;}
@@ -156,6 +151,7 @@ p{margin:0 0 var(--s5);}
 
 /* ---------------------------------------------------------- page header ---- */
 .page-header{margin:0 0 var(--s7); padding-bottom:var(--s6); border-bottom:1px solid var(--rule);}
+.page-header + .split{border-top:0; padding-top:0;}   /* one rule under the title, not two */
 .page-title{margin:0 0 var(--s3);}
 .page-subtitle{margin:0; color:var(--navy-500);}
 
@@ -171,8 +167,6 @@ p{margin:0 0 var(--s5);}
 .button:hover{background:var(--crimson-dark); border-color:var(--crimson-dark); color:var(--on-color);}
 .button-secondary{background:transparent; color:var(--fg); border-color:var(--rule);}
 .button-secondary:hover{background:var(--navy-100); color:var(--fg); border-color:var(--navy-500);}
-.bleed-dark .button-secondary{color:var(--on-color); border-color:var(--on-color-rule);}
-.bleed-dark .button-secondary:hover{background:var(--on-color-wash); color:var(--on-color);}
 
 /* ----------------------------------------------------------------- hero ---- */
 .hero{
@@ -192,7 +186,7 @@ p{margin:0 0 var(--s5);}
 /* ---------------------------------------------------------------- stats ---- */
 .statband{padding-block:var(--s7); margin-bottom:var(--s8);}
 .stats{
-  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));   /* 6 stats -> clean 3x2 */
+  display:grid; grid-template-columns:repeat(4,minmax(0,1fr));   /* 4 stats, one row */
   gap:var(--s6) var(--s5); max-width:var(--max); margin:0 auto;
 }
 .stat{border-left:2px solid var(--crimson); padding-left:var(--s4);}
@@ -204,60 +198,18 @@ p{margin:0 0 var(--s5);}
 }
 .stat p{margin:0; font-size:var(--fs-small); color:var(--muted); line-height:1.5;}
 
-/* --------------------------------------------------------- scale ladder ---- */
-/* Each rung passes its drawing as data: style="--h:<height>; --fill:<liquid level>". */
-.ladder{
-  display:grid; grid-template-columns:repeat(5,minmax(0,1fr));   /* all five, always */
-  gap:var(--s5); align-items:end;
-  border-bottom:1px solid var(--rule); padding-bottom:var(--s5);
-}
-.rung{display:flex; flex-direction:column; justify-content:flex-end; gap:var(--s4);}
-.vessel{
-  --vessel-line:var(--navy-500); --vessel-liquid:var(--navy-100);
-  width:100%; height:var(--h,100px); border:1.5px solid var(--vessel-line);
-  border-radius:var(--r) var(--r) 14px 14px;
-  background:linear-gradient(to top,var(--vessel-liquid) var(--fill,40%),transparent var(--fill,40%));
-  position:relative;
-}
-.vessel::before{
-  content:""; position:absolute; left:22%; right:22%; top:-7px; height:7px;
-  border:1.5px solid var(--vessel-line); border-bottom:none; border-radius:3px 3px 0 0;
-}
-.vessel-pilot{--vessel-line:var(--crimson); --vessel-liquid:var(--crimson-tint);}
-.rung-n{
-  font-family:var(--display); font-weight:700; font-size:var(--fs-h3); line-height:1;
-  color:var(--fg); font-variant-numeric:tabular-nums; display:block;
-}
-.rung-l{margin-top:var(--s2); display:block;}
-.rung-s{display:block; margin-top:var(--s1);}
-.rung-s.is-now{color:var(--crimson);}
-.ladder-foot{
-  display:flex; justify-content:space-between; gap:var(--s5); flex-wrap:wrap;
-  padding-top:var(--s3); margin-bottom:var(--s8);
-}
-
 /* ---------------------------------------------------------------- cards ---- */
-/* a.card is a route (crimson top, hover lift); plain .card is a static panel. */
 .cards{
   display:grid; grid-template-columns:repeat(auto-fit,minmax(258px,1fr));
   gap:var(--s5); margin-bottom:var(--s6);
 }
 .card{
   display:block; border:1px solid var(--rule); border-radius:var(--r);
+  border-top:2px solid var(--crimson);
   padding:var(--s6) var(--s5); background:var(--surface); color:var(--fg);
-  text-decoration:none;
 }
-a.card{border-top:2px solid var(--crimson); transition:border-color .18s ease, transform .18s ease;}
-a.card:hover{border-top-color:var(--crimson-dark); transform:translateY(-2px);}
 .card-i{display:block; margin-bottom:var(--s3);}
 .card p:last-child{margin-bottom:0;}
-/* A card pointing at two services cannot be an <a> — nested links are invalid.
-   .card-multi restores the crimson rule a.card carries; .go-multi holds the links. */
-.card-multi{border-top:2px solid var(--crimson);}
-.card .go,.go-multi a{font-size:var(--fs-small); font-weight:600; color:var(--navy-700); text-decoration:none;}
-.card .go{display:block; margin-top:var(--s4);}
-.go-multi{display:flex; gap:var(--s5); flex-wrap:wrap; margin-top:var(--s4);}
-a.card:hover .go,.go-multi a:hover{color:var(--crimson);}
 
 /* --------------------------------------------------------------- splits ---- */
 .split{
@@ -271,10 +223,6 @@ a.card:hover .go,.go-multi a:hover{color:var(--crimson);}
 .prose > h3{margin-top:var(--s6);}
 .prose p:last-child{margin-bottom:0;}
 .prose .cta-row{margin-top:var(--s6); margin-bottom:0;}
-/* Two facilities can share one split (Available today = CERES + Bioprocess Center).
-   Give the second heading room so its CTA does not collide with the next name. */
-.prose .cta-row + h2{margin-top:var(--s7); padding-top:var(--s6); border-top:1px solid var(--rule);}
-.prose .cta-row + p{margin-top:var(--s5);}
 
 /* ------------------------------------------------------------- statement ---- */
 .mission{
@@ -311,17 +259,6 @@ a.card:hover .go,.go-multi a:hover{color:var(--crimson);}
 .bleed-dark .inner{max-width:var(--max); margin:0 auto;}
 .inner > .cta-row:last-child{margin-bottom:0;}
 
-/* -------------------------------------------------------------- persona ---- */
-.plist{border-top:1px solid var(--rule);}
-.prow{
-  display:grid; grid-template-columns:minmax(0,240px) minmax(0,1fr);
-  gap:var(--s7); padding:var(--s7) 0; border-bottom:1px solid var(--rule); align-items:start;
-}
-.prow h3{margin:0;}
-.prow .num{display:block; margin-bottom:var(--s3);}
-.prow p{color:var(--muted); max-width:60ch;}
-.prow .cta-row{margin:0;}
-
 /* --------------------------------------------------------------- people ---- */
 .people{display:grid; grid-template-columns:repeat(auto-fit,minmax(224px,1fr)); gap:var(--s6); margin-bottom:var(--s6);}
 .person{border-top:2px solid var(--crimson); padding-top:var(--s5);}
@@ -333,11 +270,6 @@ a.card:hover .go,.go-multi a:hover{color:var(--crimson);}
 .partner{display:flex; flex-direction:column;}
 .partner .tags{margin-top:auto;}          /* tag pills align across ragged copy */
 .partner .kind{color:var(--crimson); display:block; margin-bottom:var(--s3);}
-.pending{
-  grid-column:1 / -1;                      /* spans the row instead of orphaning */
-  border:1px dashed var(--rule); border-radius:var(--r); padding:var(--s5);
-  display:flex; align-items:center; justify-content:center; text-align:center;
-}
 .tags{margin-top:var(--s3);}
 .tag{
   display:inline-block; border:1px solid var(--rule); padding:2px var(--s2);
@@ -350,21 +282,6 @@ a.card:hover .go,.go-multi a:hover{color:var(--crimson);}
 .cgrid > div{border-top:2px solid var(--crimson); padding-top:var(--s4);}
 .cgrid b{display:block; color:var(--navy-500); margin-bottom:var(--s3);}
 .cgrid p{margin:0; color:var(--muted); line-height:1.7;}
-
-/* ------------------------------------------------------------ disclosure ---- */
-details{border:1px solid var(--rule); border-radius:var(--r); margin:var(--s4) 0; background:var(--surface);}
-summary{
-  cursor:pointer; font-weight:600; color:var(--navy-700);   /* heavier: it is a control, not a label */
-  padding:var(--s4) var(--s5); list-style:none;
-}
-summary::-webkit-details-marker{display:none;}
-summary::before{content:"+ ";}
-details[open] summary::before{content:"– ";}
-details[open] summary{border-bottom:1px solid var(--rule);}
-details > *:not(summary){padding-left:var(--s5); padding-right:var(--s5);}
-details > p{margin:var(--s4) 0;}
-details > ul{padding-top:var(--s4); padding-bottom:var(--s5); margin:0; padding-left:var(--s7);}
-details li{font-size:var(--fs-small); color:var(--muted); margin-bottom:var(--s2);}
 
 /* --------------------------------------------------------------- footer ---- */
 .site-footer{border-top:3px solid var(--crimson); background:var(--ground-2);}
@@ -392,7 +309,7 @@ details li{font-size:var(--fs-small); color:var(--muted); margin-bottom:var(--s2
   h2{margin-top:var(--s7);}
   .hero{grid-template-columns:1fr; gap:var(--s6);}
   .hero-mark{max-width:200px; margin:0 auto;}
-  .split,.prow{grid-template-columns:1fr; gap:var(--s4);}
+  .split{grid-template-columns:1fr; gap:var(--s4);}
   .split-l{position:static;}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr));}
   .mission{padding:var(--s7) var(--s5);}
@@ -412,8 +329,4 @@ details li{font-size:var(--fs-small); color:var(--muted); margin-bottom:var(--s2
   .stats{gap:var(--s5) var(--s4);}
   .stat-n{font-size:var(--fs-h3);}
   .cgrid{grid-template-columns:1fr;}
-  .ladder{gap:var(--s2);}
-  .rung-l{display:none;}   /* "Microbioreactor" cannot wrap in a 65px column */
-  .rung-s{display:none;}   /* "Bioprocess Center" cannot fit a 65px column */
-  .rung-n{font-size:var(--fs-small);}
 }

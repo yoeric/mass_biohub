@@ -1,0 +1,9 @@
+# Claims that appear on more than one page, or are likely to change.
+# Pages read them as site.data.facts.<key>; change a figure here and every
+# page follows. Verify any change against the charters or with Eric first.
+
+masstech_award: "5.2"             # $ millions — "$5.2M"
+nsf: "one of five NSF BioFoundries"  # approved wording; WPI is part of one, not a lead
+network_partners: "35"            # rests on Eric's knowledge — re-verify before partner-facing use
+betc_trained: "3,000"             # BETC trainees …
+betc_years: "11"                  # … in its first N years

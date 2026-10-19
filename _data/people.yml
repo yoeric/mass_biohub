@@ -1,0 +1,13 @@
+# Leadership block on /about/. No personal emails: every contact goes
+# through the shared inbox. Roles are settled — see CLAUDE.md.
+- name: "Dr. Eric M. Young"
+  role: "Director · Principal Investigator"
+  aff: "Associate Professor, Chemical Engineering, WPI"
+
+- name: "Jon Weaver"
+  role: "Regional Innovation Officer"
+  aff: "President & CEO, Massachusetts Biomedical Initiatives"
+
+- name: "Dr. Liaohai Chen"
+  role: "Co-Principal Investigator"
+  aff: "Director, WPI Biomanufacturing Education and Training Center (BETC)"

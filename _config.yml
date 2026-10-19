@@ -1,5 +1,5 @@
 title: "The BioHub"
-description: "A shared bioindustrial manufacturing facility at Gateway Park in Worcester — pilot-scale fermentation, automated strain engineering, and bioprocess development in Worcester. Led by WPI and MBI, funded by MassTech."
+description: "A planned shared bioindustrial manufacturing facility at Gateway Park in Worcester — pilot-scale fermentation, process development, and workforce training. Led by WPI and MBI, funded by MassTech."
 url: "https://massbiohub.org"
 baseurl: ""
 
@@ -8,6 +8,7 @@ permalink: pretty
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from   # old /services/, /partners/, /work-with-us/ URLs
 
 # Don't render internal/dev files into the public site.
 # Underscore folders (_to_delete/ etc.) are skipped by Jekyll already.
