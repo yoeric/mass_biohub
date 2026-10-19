@@ -326,8 +326,6 @@ a.card:hover .go,.go-multi a:hover{color:var(--crimson);}
 .people{display:grid; grid-template-columns:repeat(auto-fit,minmax(224px,1fr)); gap:var(--s6); margin-bottom:var(--s6);}
 .person{border-top:2px solid var(--crimson); padding-top:var(--s5);}
 .person h3{margin:0 0 var(--s2);}
-.person h3 a{color:inherit; text-decoration:none;}
-.person h3 a:hover{color:var(--crimson);}
 .person .role{color:var(--crimson); margin:0 0 var(--s3);}
 .person .aff{margin:0; font-size:var(--fs-small); color:var(--muted);}
 

@@ -69,7 +69,7 @@ permalink: /about/
 
 <div class="people">
   <div class="person">
-    <h3><a href="mailto:emyoung@wpi.edu">Dr. Eric M. Young</a></h3>
+    <h3>Dr. Eric M. Young</h3>
     <p class="role">Director · Principal Investigator</p>
     <p class="aff">Associate Professor, Chemical Engineering, WPI</p>
   </div>
